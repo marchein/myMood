@@ -10,13 +10,17 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControllerDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Saves changes in the application's managed object context before the application terminates.
+        self.saveContext()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -60,6 +64,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
+    }()
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<Mood> = {
+        // Create fetch request
+        let fetchRequest: NSFetchRequest<Mood> = Mood.fetchRequest()
+        
+        // Configure fetch request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        
+        // Create fetched results controlelr
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.persistentContainer.viewContext,
+                                                                  sectionNameKeyPath: #keyPath(Mood.isoDate),
+                                                                  cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self
+
+        return fetchedResultsController
     }()
 
     // MARK: - Core Data Saving support

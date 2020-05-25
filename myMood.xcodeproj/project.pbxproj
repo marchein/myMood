@@ -7,25 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */; };
+		5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3E0247C6FD8000F374C /* Mood+Date.swift */; };
+		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
+		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
+		5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryViewController.swift */; };
 		5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA478247C396C002B3227 /* AppDelegate.swift */; };
 		5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA47A247C396C002B3227 /* SceneDelegate.swift */; };
-		5B6AA47D247C396C002B3227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA47C247C396C002B3227 /* ViewController.swift */; };
 		5B6AA480247C396C002B3227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA47E247C396C002B3227 /* Main.storyboard */; };
 		5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */; };
 		5B6AA485247C396D002B3227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA484247C396D002B3227 /* Assets.xcassets */; };
 		5B6AA488247C396D002B3227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */; };
+		5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA48F247C4649002B3227 /* MainViewController.swift */; };
+		5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */; };
+		5B6AA494247C5319002B3227 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA493247C5319002B3227 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
+		5B04F3E0247C6FD8000F374C /* Mood+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+Date.swift"; sourceTree = "<group>"; };
+		5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DropShadow.swift"; sourceTree = "<group>"; };
+		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
+		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		5B4FCBF2247C5E850031F485 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		5B6AA475247C396C002B3227 /* myMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6AA478247C396C002B3227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6AA47A247C396C002B3227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B6AA47C247C396C002B3227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B6AA47F247C396C002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B6AA482247C396C002B3227 /* myMood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myMood.xcdatamodel; sourceTree = "<group>"; };
 		5B6AA484247C396D002B3227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B6AA487247C396D002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B6AA489247C396D002B3227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B6AA48F247C4649002B3227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
+		5B6AA493247C5319002B3227 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +48,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4FCBEA247C5DB70031F485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B4FCBEB247C5DB70031F485 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B4FCBED247C5E260031F485 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA493247C5319002B3227 /* Model.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B4FCBEE247C5E2B0031F485 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5B4FCBEF247C5E310031F485 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA48F247C4649002B3227 /* MainViewController.swift */,
+				5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */,
+				5B4FCBF2247C5E850031F485 /* EntryViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B4FCBF0247C5E350031F485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */,
+				5B04F3E0247C6FD8000F374C /* Mood+Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B4FCBF1247C5E530031F485 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA47E247C396C002B3227 /* Main.storyboard */,
+				5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5B6AA46C247C396C002B3227 = {
 			isa = PBXGroup;
 			children = (
 				5B6AA477247C396C002B3227 /* myMood */,
 				5B6AA476247C396C002B3227 /* Products */,
+				5B4FCBEA247C5DB70031F485 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +127,17 @@
 		5B6AA477247C396C002B3227 /* myMood */ = {
 			isa = PBXGroup;
 			children = (
+				5B4FCBEF247C5E310031F485 /* Views */,
+				5B4FCBF1247C5E530031F485 /* Storyboards */,
+				5B4FCBEE247C5E2B0031F485 /* CoreData */,
+				5B4FCBF0247C5E350031F485 /* Extensions */,
+				5B4FCBED247C5E260031F485 /* Data */,
+				5B6AA484247C396D002B3227 /* Assets.xcassets */,
+				5B4FCBE9247C5DB40031F485 /* myMood.entitlements */,
 				5B6AA478247C396C002B3227 /* AppDelegate.swift */,
 				5B6AA47A247C396C002B3227 /* SceneDelegate.swift */,
-				5B6AA47C247C396C002B3227 /* ViewController.swift */,
-				5B6AA47E247C396C002B3227 /* Main.storyboard */,
-				5B6AA484247C396D002B3227 /* Assets.xcassets */,
-				5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */,
 				5B6AA489247C396D002B3227 /* Info.plist */,
-				5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */,
+				5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */,
 			);
 			path = myMood;
 			sourceTree = "<group>";
@@ -142,9 +214,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */,
-				5B6AA47D247C396C002B3227 /* ViewController.swift in Sources */,
 				5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */,
+				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
+				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
+				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
+				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
 				5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */,
+				5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */,
+				5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */,
+				5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
@@ -306,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
