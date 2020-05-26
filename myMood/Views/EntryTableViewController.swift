@@ -61,8 +61,8 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         //self.setupMessageLabel()
         
         // Add Refresh Control to Table View
-        self.tableView.refreshControl = refreshControl
-        self.refreshControl?.addTarget(self, action: #selector(self.fetchData), for: .valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(self.fetchData), for: UIControl.Event.valueChanged)
+
     }
     
     private func updateView() {
@@ -75,8 +75,8 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
         self.tableView.isHidden = !hasMoods
         //self.messageLabel.isHidden = hasMoods
         
-        self.refreshControl?.endRefreshing()
         self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
     /*private func setupMessageLabel() {
