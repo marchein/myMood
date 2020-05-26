@@ -185,14 +185,24 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+        if segue.identifier == SegueIdentifiers.ShowMoodIdentifier {
+            guard let moodVC = segue.destination as? MoodViewController, let indexPath = self.tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let mood = self.fetchedResultsController.object(at: indexPath)
+            
+            moodVC.mood = mood
+            moodVC.indexPath = indexPath
+        }
      }
-     */
+     
     
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */; };
 		5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3E0247C6FD8000F374C /* Mood+Date.swift */; };
+		5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10CFA1247D403C00014B34 /* MoodViewController.swift */; };
 		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
 		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
 		5B4FCBF3247C5E850031F485 /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */; };
@@ -21,11 +22,13 @@
 		5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA48F247C4649002B3227 /* MainViewController.swift */; };
 		5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */; };
 		5B6AA494247C5319002B3227 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA493247C5319002B3227 /* Model.swift */; };
+		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		5B04F3E0247C6FD8000F374C /* Mood+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+Date.swift"; sourceTree = "<group>"; };
+		5B10CFA1247D403C00014B34 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DropShadow.swift"; sourceTree = "<group>"; };
 		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
 		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -41,6 +44,7 @@
 		5B6AA48F247C4649002B3227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		5B6AA493247C5319002B3227 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B10CF9F247D401800014B34 /* Entrys */ = {
+			isa = PBXGroup;
+			children = (
+				5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */,
+				5B10CFA1247D403C00014B34 /* MoodViewController.swift */,
+			);
+			path = Entrys;
+			sourceTree = "<group>";
+		};
+		5B10CFA0247D402500014B34 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA48F247C4649002B3227 /* MainViewController.swift */,
+				5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		5B4FCBEA247C5DB70031F485 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +104,8 @@
 		5B4FCBEF247C5E310031F485 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5B6AA48F247C4649002B3227 /* MainViewController.swift */,
-				5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */,
-				5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */,
+				5B10CFA0247D402500014B34 /* Main */,
+				5B10CF9F247D401800014B34 /* Entrys */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +115,7 @@
 			children = (
 				5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */,
 				5B04F3E0247C6FD8000F374C /* Mood+Date.swift */,
+				5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,9 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */,
 				5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */,
 				5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */,
 				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
+				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,

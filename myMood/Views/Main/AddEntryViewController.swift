@@ -9,11 +9,15 @@
 import UIKit
 import CoreData
 
-class AddEntryViewController: UIViewController, UITextViewDelegate {
+class AddEntryViewController: UITableViewController, UITextViewDelegate {
     
     var selectedEmoji: String?
+    var mood: Mood?
+    var moodEditing: Bool = false
+    
     @IBOutlet weak var emojiStackView: UIStackView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    
     private let descPlaceholderText = "Wie ging es dir seit deinem letzten Eintrag?"
     
     override func viewDidLoad() {
@@ -22,18 +26,37 @@ class AddEntryViewController: UIViewController, UITextViewDelegate {
         self.descriptionTextView.text = self.descPlaceholderText
         self.descriptionTextView.textColor = UIColor.lightGray
         self.loadEmojis()
-        self.highlightEmoji(emoji: self.selectedEmoji)
+        self.setupForm(mood: self.mood)
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupForm(mood: Mood?) {
+        if let editingMood = mood {
+            self.moodEditing = true
+            self.title = "Eintrag bearbeiten"
+            self.highlightEmoji(emoji: editingMood.mood)
+            if let desc = editingMood.desc, desc.count > 0 {
+                self.descriptionTextView.text = desc
+                self.setDescriptionColor(self.descriptionTextView)
+            }
+        } else {
+            self.title = "Neuer Eintrag"
+            self.highlightEmoji(emoji: self.selectedEmoji)
+        }
+    }
+    
+    private func setDescriptionColor(_ textView: UITextView) {
+        if #available(iOS 13, *) {
+            textView.textColor = UIColor.label
+        } else {
+            textView.textColor = UIColor.black
+        }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
-            if #available(iOS 13, *) {
-                textView.textColor = UIColor.label
-            } else {
-                textView.textColor = UIColor.black
-            }
+            self.setDescriptionColor(textView)
         }
     }
     
@@ -109,19 +132,36 @@ class AddEntryViewController: UIViewController, UITextViewDelegate {
     @IBAction func saveAction(_ sender: Any) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let newMood = Mood(context: context)
-        
-        newMood.date = Date()
-        newMood.mood = self.selectedEmoji
-        newMood.desc = self.descriptionTextView.text.contains(self.descPlaceholderText) ? nil : self.descriptionTextView.text
-        
-        do {
-            try context.save()
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        if moodEditing, let editedMood = self.mood {
+            editedMood.mood = self.selectedEmoji
+            editedMood.desc = self.descriptionTextView.text.contains(self.descPlaceholderText) ? nil : self.descriptionTextView.text
+            
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        } else {
+            let newMood = Mood(context: context)
+            
+            newMood.date = Date()
+            newMood.mood = self.selectedEmoji
+            newMood.desc = self.descriptionTextView.text.contains(self.descPlaceholderText) ? nil : self.descriptionTextView.text
+            
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
         
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        if self.isModal {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+            //self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

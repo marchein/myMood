@@ -9,14 +9,14 @@
 import UIKit
 import CoreData
 
-class MainViewController: UIViewController {
+class MainViewController: UITableViewController {
     @IBOutlet weak var emojiStackView: UIStackView!
+    @IBOutlet weak var moodTableCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadEmojis()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

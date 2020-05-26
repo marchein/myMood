@@ -9,11 +9,12 @@
 import UIKit
 
 struct Model {
-    static let Moods = ["😭", "😔", "😕", "🙂", "😊", "😂"]
+    static let Moods = ["😭", "😔", "😕", "😊", "😂"]
 }
 
 struct SegueIdentifiers {
     static let AddEntryIdentifier = "addEntryIdentifier"
+    static let ShowMoodIdentifier = "showMoodSegue"
+    static let EditMoodIdentifier = "editMoodSegue"
+    static let AddMoodIdentifier = "addMoodSegue"
 }
-
-
