@@ -119,11 +119,17 @@ class EntryTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     private func configureCell(cell: MoodTableViewCell, indexPath: IndexPath) {
+        cell.descriptionLabel.isHidden = false
+        
         let mood = self.fetchedResultsController.object(at: indexPath)
         
         cell.timeLabel.text = "\(mood.isoTime) Uhr"
         cell.moodLabel.text = mood.mood
-        cell.descriptionLabel.text = mood.desc
+        if let desc = mood.desc, desc.count > 0 {
+            cell.descriptionLabel.text = mood.desc
+        } else {
+            cell.descriptionLabel.isHidden = true
+        }
     }
     
     func validateIndexPath(_ indexPath: IndexPath) -> Bool {
