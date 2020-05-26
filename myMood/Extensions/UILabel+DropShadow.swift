@@ -9,11 +9,16 @@
 import UIKit
 
 extension UILabel {
-    func textDropShadow() {
+    func addDropShadow() {
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 4.0
         self.layer.shadowOpacity = 0.4
         self.layer.shadowOffset = CGSize(width: 2, height: 2)
+        if #available(iOS 13, *) {
+            self.layer.shadowColor = UIColor.label.cgColor
+        } else {
+            self.layer.shadowColor = UIColor.black.cgColor
+        }
     }
     
     func removeDropShadow() {
@@ -22,10 +27,10 @@ extension UILabel {
         self.layer.shadowOpacity = 0.0
         self.layer.shadowOffset = CGSize()
     }
-
+    
     static func createCustomLabel() -> UILabel {
         let label = UILabel()
-        label.textDropShadow()
+        label.addDropShadow()
         return label
     }
 }

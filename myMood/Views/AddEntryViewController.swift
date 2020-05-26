@@ -29,7 +29,11 @@ class AddEntryViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
-            textView.textColor = UIColor.black
+            if #available(iOS 13, *) {
+                textView.textColor = UIColor.label
+            } else {
+                textView.textColor = UIColor.black
+            }
         }
     }
     
@@ -83,7 +87,7 @@ class AddEntryViewController: UIViewController, UITextViewDelegate {
             button.titleLabel?.removeDropShadow()
         }
         if let button = self.emojiStackView.arrangedSubviews[index] as? UIButton {
-            button.titleLabel?.textDropShadow()
+            button.titleLabel?.addDropShadow()
             self.selectedEmoji = button.titleLabel?.text
         }
     }

@@ -9,29 +9,9 @@
 import UIKit
 import CoreData
 
-class EntryViewController: UIViewController, UITableViewDataSource, NSFetchedResultsControllerDelegate {
-    
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
-    
-    // Responsible for listing out BlogIdeas in a table view
-    
-    // Holds a reference to an NSManagedObjectContext instance
-    // which gets initialized in the SceneDelegate.swift file
-    // and passed to this view controller when the scene gets "connected"
-    
-    // Uses NSFetchedResultsController to keep the table view in sync
-    // with the Core Data managed object context
-    
-    // Implements swipe-to-delete with delete confirmation
-    
-    // Navigates to editor when someone taps on a table view row
-    // and passes its NSManagedObjectContext instance along
-    
+class EntryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     var fetchedResultsController: NSFetchedResultsController<Mood>!
-    private let refreshControl = UIRefreshControl()
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,23 +19,24 @@ class EntryViewController: UIViewController, UITableViewDataSource, NSFetchedRes
         self.setupView()
         
         self.fetchedResultsController = (UIApplication.shared.delegate as! AppDelegate).fetchedResultsController
+        self.managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         self.fetchData()
         
         self.updateView()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.title = self.title
         
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(toggleEditing))
-        self.tabBarController?.navigationItem.rightBarButtonItem = editButton
+        self.tabBarController?.navigationItem.rightBarButtonItem = editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,11 +58,11 @@ class EntryViewController: UIViewController, UITableViewDataSource, NSFetchedRes
     
     private func setupView() {
         self.tableView.dataSource = self
-        self.setupMessageLabel()
+        //self.setupMessageLabel()
         
         // Add Refresh Control to Table View
         self.tableView.refreshControl = refreshControl
-        self.refreshControl.addTarget(self, action: #selector(self.fetchData), for: .valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(self.fetchData), for: .valueChanged)
     }
     
     private func updateView() {
@@ -92,49 +73,38 @@ class EntryViewController: UIViewController, UITableViewDataSource, NSFetchedRes
         }
         
         self.tableView.isHidden = !hasMoods
-        self.messageLabel.isHidden = hasMoods
+        //self.messageLabel.isHidden = hasMoods
         
-        self.refreshControl.endRefreshing()
-        self.activityIndicatorView.stopAnimating()
+        self.refreshControl?.endRefreshing()
         self.tableView.reloadData()
     }
     
-    @objc private func toggleEditing() {
-        self.tableView.setEditing(!self.tableView.isEditing, animated: true)
-        
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(toggleEditing))
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(toggleEditing))
-        
-        if self.tableView.isEditing {
-            self.tabBarController?.navigationItem.rightBarButtonItem = doneButton
-        } else {
-            self.tabBarController?.navigationItem.rightBarButtonItem = editButton
-        }
-        
-    }
-    
-    private func setupMessageLabel() {
-        self.messageLabel.text = "Bisher existieren noch keine Stimmungen"
-    }
+    /*private func setupMessageLabel() {
+     self.messageLabel.text = "Bisher existieren noch keine Stimmungen"
+     }*/
     
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return self.fetchedResultsController.sections?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let firstItemInSection = self.fetchedResultsController.sections?[section].objects?[0] as? Mood
         return firstItemInSection?.isoDate
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = self.fetchedResultsController.sections?[section]
-        return (section?.numberOfObjects)!
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = self.fetchedResultsController.sections else {
+            return 0
+        }
+        let num = sections[section].numberOfObjects
+        print("\(num) objects in section \(section)")
+        return num
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MoodTableViewCell.reuseIdentifier, for: indexPath) as? MoodTableViewCell else {
             fatalError("Unexpected Index Path")
         }
@@ -175,17 +145,24 @@ class EntryViewController: UIViewController, UITableViewDataSource, NSFetchedRes
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let objectToDelete = self.fetchedResultsController.object(at: indexPath)
+            self.managedObjectContext.delete(objectToDelete)
+            do {
+                try self.managedObjectContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+            self.fetchData()
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
     
     /*
      // Override to support rearranging the table view.

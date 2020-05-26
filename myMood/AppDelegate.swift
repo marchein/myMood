@@ -70,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
         // Create fetch request
         let fetchRequest: NSFetchRequest<Mood> = Mood.fetchRequest()
         
+        fetchRequest.returnsObjectsAsFaults = false
+        
         // Configure fetch request
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         

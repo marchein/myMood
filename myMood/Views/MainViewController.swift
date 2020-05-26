@@ -42,10 +42,10 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueIdentifiers.AddEntryIdentifier {
-            guard let destination = segue.destination as? AddEntryViewController, let emoji = sender as? UIButton else {
+            guard let navVC = segue.destination as? UINavigationController, let addVC = navVC.viewControllers[0] as? AddEntryViewController, let emoji = sender as? UIButton else {
                 return
             }
-            destination.selectedEmoji = emoji.titleLabel?.text
+            addVC.selectedEmoji = emoji.titleLabel?.text
         }
     }
     
