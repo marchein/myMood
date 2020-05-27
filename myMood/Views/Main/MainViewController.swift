@@ -9,24 +9,47 @@
 import UIKit
 import CoreData
 
-class MainViewController: UITableViewController {
-    @IBOutlet weak var emojiStackView: UIStackView!
-    @IBOutlet weak var moodTableCell: UITableViewCell!
+class MainViewController: UITableViewController, ModalDelegate {
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadEmojis()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
         self.tabBarController?.title = self.title
         self.tabBarController?.navigationItem.rightBarButtonItem = nil;
     }
     
-    func loadEmojis() {
-        print(emojiStackView.arrangedSubviews)
-        for subview in self.emojiStackView.arrangedSubviews {
+    func didCloseModal() {
+        self.tableView.reloadData()
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueIdentifiers.AddEntryIdentifier {
+            guard let navVC = segue.destination as? UINavigationController, let addVC = navVC.viewControllers[0] as? AddEntryViewController, let emoji = sender as? UIButton else {
+                return
+            }
+            addVC.selectedEmoji = emoji.titleLabel?.text
+        } else if segue.identifier == SegueIdentifiers.ShowMoodIdentifier {
+            guard let moodVC = segue.destination as? MoodViewController else {
+                return
+            }
+            moodVC.title = "Letzter Eintrag"
+            moodVC.mood = Model.getLastEntry()
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func emojiTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: sender)
+    }
+   
+    func loadEmojis(for cell: MoodSelectionTableViewCell) {
+        for subview in cell.emojiStackView.arrangedSubviews {
             subview.removeFromSuperview()
         }
         
@@ -36,20 +59,9 @@ class MainViewController: UITableViewController {
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
             button.addTarget(self, action: #selector(emojiTapped), for: .touchUpInside)
             
-            self.emojiStackView.addArrangedSubview(button)
+            cell.emojiStackView.addArrangedSubview(button)
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == SegueIdentifiers.AddEntryIdentifier {
-            guard let navVC = segue.destination as? UINavigationController, let addVC = navVC.viewControllers[0] as? AddEntryViewController, let emoji = sender as? UIButton else {
-                return
-            }
-            addVC.selectedEmoji = emoji.titleLabel?.text
-        }
-    }
     
-    @IBAction func emojiTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: sender)
-    }
 }

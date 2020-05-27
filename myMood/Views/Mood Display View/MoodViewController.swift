@@ -9,15 +9,17 @@
 import UIKit
 
 class MoodViewController: UITableViewController {
-    
-    var mood: Mood?
-    var indexPath: IndexPath?
-    
+    // MARK: - Outlets
     @IBOutlet weak var moodLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var descTextView: UITextView!
     
+    // MARK: - Properties
+    var mood: Mood?
+    var indexPath: IndexPath?
+    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -28,9 +30,11 @@ class MoodViewController: UITableViewController {
         if let indexPath = indexPath {
             let fetchedResultsController = (UIApplication.shared.delegate as! AppDelegate).fetchedResultsController
             self.mood = fetchedResultsController.object(at: indexPath)
-            self.setupView()
-            print("did update")
+        } else {
+            self.mood = Model.getLastEntry()
         }
+        self.setupView()
+        print("did update")
     }
     
     private func setupView() {        

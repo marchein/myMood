@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-class AddEntryViewController: UITableViewController, UITextViewDelegate {
-    
+class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDelegate {
     var selectedEmoji: String?
     var mood: Mood?
     var moodEditing: Bool = false
@@ -43,6 +42,7 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate {
             self.title = "Neuer Eintrag"
             self.highlightEmoji(emoji: self.selectedEmoji)
         }
+        self.checkIfSavingIsPossible()
     }
     
     private func setDescriptionColor(_ textView: UITextView) {
@@ -117,6 +117,15 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate {
     
     @IBAction func emojiTapped(_ sender: UIButton) {
         self.highlightEmoji(emoji: sender.titleLabel?.text)
+        self.checkIfSavingIsPossible()
+    }
+    
+    @objc func checkIfSavingIsPossible() {
+        var canSave = false
+        if let _ = selectedEmoji {
+            canSave = true
+        }
+        self.navigationItem.rightBarButtonItem?.isEnabled = canSave
     }
     
     /*
@@ -158,10 +167,25 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate {
         }
         
         if self.isModal {
+            //TODO: reload table when modal is closed
+            self.didCloseModal()
             self.navigationController?.dismiss(animated: true, completion: nil)
         } else {
             self.navigationController?.popViewController(animated: true)
             //self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    
+    
+    func didCloseModal() {
+        if let presenter = self.presentingViewController {
+            for child in presenter.children {
+                if let navVC = child as? UINavigationController, let mainVC = navVC.children[0] as? MainViewController {
+                    mainVC.didCloseModal()
+                }
+            }
+            
         }
     }
 }

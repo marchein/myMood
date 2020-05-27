@@ -9,23 +9,26 @@
 import Foundation
 
 extension Mood {
-    @objc var isoDate: String { get {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        // insert settings for TimeZone and Calendar here
-        guard let date = self.date else {
-            return ""
-        }
-        return formatter.string(from: date)
-    }}
     
-    @objc var isoTime: String { get {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        // insert settings for TimeZone and Calendar here
-        guard let date = self.date else {
-            return ""
+    @objc var isoDate: String {
+        get {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            guard let date = self.date else {
+                return ""
+            }
+            return formatter.string(from: date)
         }
-        return formatter.string(from: date)
-    }}
+    }
+    
+    @objc var isoTime: String {
+        get {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            guard let date = self.date else {
+                return ""
+            }
+            return formatter.string(from: date)
+        }
+    }
 }

@@ -12,7 +12,7 @@
 		5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10CFA1247D403C00014B34 /* MoodViewController.swift */; };
 		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
 		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
-		5B4FCBF3247C5E850031F485 /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */; };
+		5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryViewController.swift */; };
 		5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA478247C396C002B3227 /* AppDelegate.swift */; };
 		5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA47A247C396C002B3227 /* SceneDelegate.swift */; };
 		5B6AA480247C396C002B3227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA47E247C396C002B3227 /* Main.storyboard */; };
@@ -22,7 +22,12 @@
 		5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA48F247C4649002B3227 /* MainViewController.swift */; };
 		5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */; };
 		5B6AA494247C5319002B3227 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA493247C5319002B3227 /* Model.swift */; };
+		5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */; };
+		5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B790801247E869E00C30736 /* EntryViewController+TableView.swift */; };
+		5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */; };
 		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
+		5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */; };
+		5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +37,7 @@
 		5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DropShadow.swift"; sourceTree = "<group>"; };
 		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
 		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		5B4FCBF2247C5E850031F485 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		5B6AA475247C396C002B3227 /* myMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6AA478247C396C002B3227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6AA47A247C396C002B3227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +49,12 @@
 		5B6AA48F247C4649002B3227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		5B6AA493247C5319002B3227 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddEntryViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B790801247E869E00C30736 /* EntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
+		5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +72,8 @@
 		5B10CF9F247D401800014B34 /* Entrys */ = {
 			isa = PBXGroup;
 			children = (
-				5B4FCBF2247C5E850031F485 /* EntryTableViewController.swift */,
-				5B10CFA1247D403C00014B34 /* MoodViewController.swift */,
+				5B4FCBF2247C5E850031F485 /* EntryViewController.swift */,
+				5B790801247E869E00C30736 /* EntryViewController+TableView.swift */,
 			);
 			path = Entrys;
 			sourceTree = "<group>";
@@ -72,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6AA48F247C4649002B3227 /* MainViewController.swift */,
-				5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */,
+				5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -104,8 +114,10 @@
 		5B4FCBEF247C5E310031F485 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B953692247E846D00AFF76B /* Add View */,
 				5B10CFA0247D402500014B34 /* Main */,
 				5B10CF9F247D401800014B34 /* Entrys */,
+				5B790803247E87A300C30736 /* Mood Display View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,14 +166,49 @@
 				5B4FCBEE247C5E2B0031F485 /* CoreData */,
 				5B4FCBF0247C5E350031F485 /* Extensions */,
 				5B4FCBED247C5E260031F485 /* Data */,
+				5BEE453E247E77E4002BE6E2 /* Delegates */,
+				5BEE453F247E77FA002BE6E2 /* Cells */,
 				5B6AA484247C396D002B3227 /* Assets.xcassets */,
 				5B4FCBE9247C5DB40031F485 /* myMood.entitlements */,
-				5B6AA478247C396C002B3227 /* AppDelegate.swift */,
-				5B6AA47A247C396C002B3227 /* SceneDelegate.swift */,
 				5B6AA489247C396D002B3227 /* Info.plist */,
-				5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */,
 			);
 			path = myMood;
+			sourceTree = "<group>";
+		};
+		5B790803247E87A300C30736 /* Mood Display View */ = {
+			isa = PBXGroup;
+			children = (
+				5B10CFA1247D403C00014B34 /* MoodViewController.swift */,
+			);
+			path = "Mood Display View";
+			sourceTree = "<group>";
+		};
+		5B953692247E846D00AFF76B /* Add View */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */,
+				5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */,
+			);
+			path = "Add View";
+			sourceTree = "<group>";
+		};
+		5BEE453E247E77E4002BE6E2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AA478247C396C002B3227 /* AppDelegate.swift */,
+				5B6AA47A247C396C002B3227 /* SceneDelegate.swift */,
+				5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5BEE453F247E77FA002BE6E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */,
+				5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,17 +283,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */,
+				5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */,
 				5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */,
 				5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */,
+				5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */,
 				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
 				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
+				5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */,
+				5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
+				5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
 				5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */,
 				5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */,
 				5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */,
-				5B4FCBF3247C5E850031F485 /* EntryTableViewController.swift in Sources */,
+				5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -417,6 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
