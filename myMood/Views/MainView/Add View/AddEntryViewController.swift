@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import StoreKit
 
 class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDelegate {
     var selectedEmoji: String?
@@ -17,7 +18,7 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
     @IBOutlet weak var emojiStackView: UIStackView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    private let descPlaceholderText = "Wie ging es dir seit deinem letzten Eintrag?"
+    private let descPlaceholderText = "Wie ging es Dir seit Deinem letzten Eintrag?"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,11 +122,7 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
     }
     
     @objc func checkIfSavingIsPossible() {
-        var canSave = false
-        if let _ = selectedEmoji {
-            canSave = true
-        }
-        self.navigationItem.rightBarButtonItem?.isEnabled = canSave
+        self.navigationItem.rightBarButtonItem?.isEnabled = selectedEmoji != nil
     }
     
     /*
@@ -160,6 +157,7 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
             
             do {
                 try context.save()
+                self.incrementAddedMoods()
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -167,7 +165,6 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
         }
         
         if self.isModal {
-            //TODO: reload table when modal is closed
             self.didCloseModal()
             self.navigationController?.dismiss(animated: true, completion: nil)
         } else {
@@ -176,7 +173,22 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
         }
     }
     
+    func getAddedMoods() -> Int {
+        return Model.sharedDefaults.integer(forKey: LocalKeys.moodsAdded)
+    }
     
+    func incrementAddedMoods() {
+        let addedMoods = getAddedMoods() + 1
+        Model.sharedDefaults.set(addedMoods, forKey: LocalKeys.moodsAdded)
+        print(addedMoods)
+        if addedMoods == 10 || addedMoods == 100 || addedMoods == 1000 {
+            showRateWindow()
+        }
+    }
+    
+    func showRateWindow() {
+        SKStoreReviewController.requestReview()
+    }
     
     func didCloseModal() {
         if let presenter = self.presentingViewController {

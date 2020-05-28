@@ -7,33 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B021E2E247EE14200DF3AC1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E2D247EE14200DF3AC1 /* SettingsViewController.swift */; };
+		5B021E30247EEA3600DF3AC1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E2F247EEA3600DF3AC1 /* Utilities.swift */; };
+		5B021E32247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E31247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift */; };
+		5B021E34247EED4900DF3AC1 /* SettingsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E33247EED4900DF3AC1 /* SettingsViewController+TableView.swift */; };
+		5B021E36247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */; };
+		5B021E3B247EF42700DF3AC1 /* TipJarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E38247EF42700DF3AC1 /* TipJarTableViewController.swift */; };
+		5B021E3C247EF42700DF3AC1 /* TipJar+Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E39247EF42700DF3AC1 /* TipJar+Transaction.swift */; };
+		5B021E3D247EF42700DF3AC1 /* TipJar+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E3A247EF42700DF3AC1 /* TipJar+TableView.swift */; };
+		5B021E46247EF48A00DF3AC1 /* Bundle+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E3E247EF48A00DF3AC1 /* Bundle+Icon.swift */; };
+		5B021E4A247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E42247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift */; };
+		5B021E4B247EF48A00DF3AC1 /* UIView+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E43247EF48A00DF3AC1 /* UIView+Effects.swift */; };
+		5B021E50247EF4F100DF3AC1 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E4F247EF4F100DF3AC1 /* BorderedButton.swift */; };
+		5B021E52247EF4F600DF3AC1 /* TopAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E51247EF4F600DF3AC1 /* TopAlignedLabel.swift */; };
+		5B021E54247EF5B700DF3AC1 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E53247EF5B700DF3AC1 /* TipTableViewCell.swift */; };
+		5B021E5B247EF8F500DF3AC1 /* myTodo2019.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B021E56247EF8F500DF3AC1 /* myTodo2019.png */; };
+		5B021E5C247EF8F500DF3AC1 /* myTodo_christmas.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B021E57247EF8F500DF3AC1 /* myTodo_christmas.png */; };
+		5B021E5D247EF8F500DF3AC1 /* myTodo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B021E58247EF8F500DF3AC1 /* myTodo1.png */; };
+		5B021E5E247EF8F500DF3AC1 /* myTodo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B021E59247EF8F500DF3AC1 /* myTodo2.png */; };
+		5B021E5F247EF8F500DF3AC1 /* myTodo2019dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B021E5A247EF8F500DF3AC1 /* myTodo2019dark.png */; };
+		5B021E61247EF90F00DF3AC1 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B021E60247EF90F00DF3AC1 /* AppIcon.swift */; };
 		5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */; };
 		5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3E0247C6FD8000F374C /* Mood+Date.swift */; };
 		5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10CFA1247D403C00014B34 /* MoodViewController.swift */; };
+		5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */; };
 		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
 		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
 		5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryViewController.swift */; };
 		5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA478247C396C002B3227 /* AppDelegate.swift */; };
 		5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA47A247C396C002B3227 /* SceneDelegate.swift */; };
-		5B6AA480247C396C002B3227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA47E247C396C002B3227 /* Main.storyboard */; };
+		5B6AA480247C396C002B3227 /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA47E247C396C002B3227 /* Master.storyboard */; };
 		5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */; };
 		5B6AA485247C396D002B3227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA484247C396D002B3227 /* Assets.xcassets */; };
 		5B6AA488247C396D002B3227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */; };
 		5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA48F247C4649002B3227 /* MainViewController.swift */; };
 		5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */; };
 		5B6AA494247C5319002B3227 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA493247C5319002B3227 /* Model.swift */; };
+		5B718CFB247EDAE800DFE7E9 /* MoodList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B718CFA247EDAE800DFE7E9 /* MoodList.storyboard */; };
+		5B718CFD247EDC1600DFE7E9 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */; };
 		5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */; };
 		5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B790801247E869E00C30736 /* EntryViewController+TableView.swift */; };
 		5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */; };
 		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
+		5BE722BD247ED87100508FF1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BC247ED87100508FF1 /* Settings.storyboard */; };
+		5BE722BF247EDA0A00508FF1 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BE247EDA0A00508FF1 /* MainView.storyboard */; };
+		5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D8F247F02AC001C2003 /* AppIconTableViewController.swift */; };
+		5BEE0D92247F02AC001C2003 /* AppIcon+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D90247F02AC001C2003 /* AppIcon+TableView.swift */; };
+		5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */; };
 		5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */; };
 		5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B021E2D247EE14200DF3AC1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5B021E2F247EEA3600DF3AC1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		5B021E31247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController+SupportMail.swift"; sourceTree = "<group>"; };
+		5B021E33247EED4900DF3AC1 /* SettingsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafariActions.swift"; sourceTree = "<group>"; };
+		5B021E38247EF42700DF3AC1 /* TipJarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipJarTableViewController.swift; sourceTree = "<group>"; };
+		5B021E39247EF42700DF3AC1 /* TipJar+Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TipJar+Transaction.swift"; sourceTree = "<group>"; };
+		5B021E3A247EF42700DF3AC1 /* TipJar+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TipJar+TableView.swift"; sourceTree = "<group>"; };
+		5B021E3E247EF48A00DF3AC1 /* Bundle+Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Icon.swift"; sourceTree = "<group>"; };
+		5B021E42247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		5B021E43247EF48A00DF3AC1 /* UIView+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Effects.swift"; sourceTree = "<group>"; };
+		5B021E4F247EF4F100DF3AC1 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		5B021E51247EF4F600DF3AC1 /* TopAlignedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAlignedLabel.swift; sourceTree = "<group>"; };
+		5B021E53247EF5B700DF3AC1 /* TipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
+		5B021E56247EF8F500DF3AC1 /* myTodo2019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myTodo2019.png; sourceTree = "<group>"; };
+		5B021E57247EF8F500DF3AC1 /* myTodo_christmas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myTodo_christmas.png; sourceTree = "<group>"; };
+		5B021E58247EF8F500DF3AC1 /* myTodo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myTodo1.png; sourceTree = "<group>"; };
+		5B021E59247EF8F500DF3AC1 /* myTodo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myTodo2.png; sourceTree = "<group>"; };
+		5B021E5A247EF8F500DF3AC1 /* myTodo2019dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myTodo2019dark.png; sourceTree = "<group>"; };
+		5B021E60247EF90F00DF3AC1 /* AppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		5B04F3E0247C6FD8000F374C /* Mood+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+Date.swift"; sourceTree = "<group>"; };
 		5B10CFA1247D403C00014B34 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DropShadow.swift"; sourceTree = "<group>"; };
 		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
 		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -41,7 +90,7 @@
 		5B6AA475247C396C002B3227 /* myMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6AA478247C396C002B3227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6AA47A247C396C002B3227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B6AA47F247C396C002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B6AA47F247C396C002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
 		5B6AA482247C396C002B3227 /* myMood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myMood.xcdatamodel; sourceTree = "<group>"; };
 		5B6AA484247C396D002B3227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B6AA487247C396D002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,10 +98,17 @@
 		5B6AA48F247C4649002B3227 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B6AA491247C46C3002B3227 /* AddEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		5B6AA493247C5319002B3227 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5B718CFA247EDAE800DFE7E9 /* MoodList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoodList.storyboard; sourceTree = "<group>"; };
+		5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 		5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddEntryViewController+TableView.swift"; sourceTree = "<group>"; };
 		5B790801247E869E00C30736 /* EntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewController+TableView.swift"; sourceTree = "<group>"; };
 		5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
+		5BE722BC247ED87100508FF1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		5BE722BE247EDA0A00508FF1 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		5BEE0D8F247F02AC001C2003 /* AppIconTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
+		5BEE0D90247F02AC001C2003 /* AppIcon+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppIcon+TableView.swift"; sourceTree = "<group>"; };
+		5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +125,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B021E29247EE0FE00DF3AC1 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				5B10CFA0247D402500014B34 /* Main */,
+				5B953692247E846D00AFF76B /* Add View */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		5B021E2A247EE10D00DF3AC1 /* MoodList */ = {
+			isa = PBXGroup;
+			children = (
+				5B10CF9F247D401800014B34 /* Entrys */,
+				5B790803247E87A300C30736 /* Mood Display View */,
+			);
+			path = MoodList;
+			sourceTree = "<group>";
+		};
+		5B021E2B247EE11F00DF3AC1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5B021E2C247EE12D00DF3AC1 /* SettingsMain */,
+				5B021E37247EF42700DF3AC1 /* TipJar */,
+				5BEE0D8E247F02AC001C2003 /* AppIconList */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5B021E2C247EE12D00DF3AC1 /* SettingsMain */ = {
+			isa = PBXGroup;
+			children = (
+				5B021E2D247EE14200DF3AC1 /* SettingsViewController.swift */,
+				5B021E33247EED4900DF3AC1 /* SettingsViewController+TableView.swift */,
+				5B021E31247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift */,
+			);
+			path = SettingsMain;
+			sourceTree = "<group>";
+		};
+		5B021E37247EF42700DF3AC1 /* TipJar */ = {
+			isa = PBXGroup;
+			children = (
+				5B021E38247EF42700DF3AC1 /* TipJarTableViewController.swift */,
+				5B021E39247EF42700DF3AC1 /* TipJar+Transaction.swift */,
+				5B021E3A247EF42700DF3AC1 /* TipJar+TableView.swift */,
+			);
+			path = TipJar;
+			sourceTree = "<group>";
+		};
+		5B021E4E247EF4DD00DF3AC1 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B021E51247EF4F600DF3AC1 /* TopAlignedLabel.swift */,
+				5B021E4F247EF4F100DF3AC1 /* BorderedButton.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		5B021E55247EF8F500DF3AC1 /* Alternative App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				5B021E56247EF8F500DF3AC1 /* myTodo2019.png */,
+				5B021E57247EF8F500DF3AC1 /* myTodo_christmas.png */,
+				5B021E58247EF8F500DF3AC1 /* myTodo1.png */,
+				5B021E59247EF8F500DF3AC1 /* myTodo2.png */,
+				5B021E5A247EF8F500DF3AC1 /* myTodo2019dark.png */,
+			);
+			path = "Alternative App Icons";
+			sourceTree = "<group>";
+		};
 		5B10CF9F247D401800014B34 /* Entrys */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +223,7 @@
 		5B4FCBED247C5E260031F485 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5B021E60247EF90F00DF3AC1 /* AppIcon.swift */,
 				5B6AA493247C5319002B3227 /* Model.swift */,
 			);
 			path = Data;
@@ -114,10 +240,9 @@
 		5B4FCBEF247C5E310031F485 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5B953692247E846D00AFF76B /* Add View */,
-				5B10CFA0247D402500014B34 /* Main */,
-				5B10CF9F247D401800014B34 /* Entrys */,
-				5B790803247E87A300C30736 /* Mood Display View */,
+				5B021E29247EE0FE00DF3AC1 /* MainView */,
+				5B021E2A247EE10D00DF3AC1 /* MoodList */,
+				5B021E2B247EE11F00DF3AC1 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,9 +250,14 @@
 		5B4FCBF0247C5E350031F485 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5B021E3E247EF48A00DF3AC1 /* Bundle+Icon.swift */,
+				5B021E42247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift */,
+				5B021E43247EF48A00DF3AC1 /* UIView+Effects.swift */,
 				5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */,
 				5B04F3E0247C6FD8000F374C /* Mood+Date.swift */,
 				5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */,
+				5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */,
+				5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,7 +265,11 @@
 		5B4FCBF1247C5E530031F485 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5B6AA47E247C396C002B3227 /* Main.storyboard */,
+				5B6AA47E247C396C002B3227 /* Master.storyboard */,
+				5BE722BE247EDA0A00508FF1 /* MainView.storyboard */,
+				5B718CFA247EDAE800DFE7E9 /* MoodList.storyboard */,
+				5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */,
+				5BE722BC247ED87100508FF1 /* Settings.storyboard */,
 				5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -161,16 +295,19 @@
 		5B6AA477247C396C002B3227 /* myMood */ = {
 			isa = PBXGroup;
 			children = (
+				5B021E55247EF8F500DF3AC1 /* Alternative App Icons */,
 				5B4FCBEF247C5E310031F485 /* Views */,
 				5B4FCBF1247C5E530031F485 /* Storyboards */,
 				5B4FCBEE247C5E2B0031F485 /* CoreData */,
 				5B4FCBF0247C5E350031F485 /* Extensions */,
+				5B021E4E247EF4DD00DF3AC1 /* Custom Views */,
 				5B4FCBED247C5E260031F485 /* Data */,
 				5BEE453E247E77E4002BE6E2 /* Delegates */,
 				5BEE453F247E77FA002BE6E2 /* Cells */,
 				5B6AA484247C396D002B3227 /* Assets.xcassets */,
 				5B4FCBE9247C5DB40031F485 /* myMood.entitlements */,
 				5B6AA489247C396D002B3227 /* Info.plist */,
+				5B021E2F247EEA3600DF3AC1 /* Utilities.swift */,
 			);
 			path = myMood;
 			sourceTree = "<group>";
@@ -192,6 +329,15 @@
 			path = "Add View";
 			sourceTree = "<group>";
 		};
+		5BEE0D8E247F02AC001C2003 /* AppIconList */ = {
+			isa = PBXGroup;
+			children = (
+				5BEE0D8F247F02AC001C2003 /* AppIconTableViewController.swift */,
+				5BEE0D90247F02AC001C2003 /* AppIcon+TableView.swift */,
+			);
+			path = AppIconList;
+			sourceTree = "<group>";
+		};
 		5BEE453E247E77E4002BE6E2 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +351,8 @@
 		5BEE453F247E77FA002BE6E2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */,
+				5B021E53247EF5B700DF3AC1 /* TipTableViewCell.swift */,
 				5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */,
 				5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */,
 			);
@@ -248,10 +396,10 @@
 			};
 			buildConfigurationList = 5B6AA470247C396C002B3227 /* Build configuration list for PBXProject "myMood" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = de;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				de,
 				Base,
 			);
 			mainGroup = 5B6AA46C247C396C002B3227;
@@ -270,8 +418,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6AA488247C396D002B3227 /* LaunchScreen.storyboard in Resources */,
+				5B021E5B247EF8F500DF3AC1 /* myTodo2019.png in Resources */,
+				5B021E5C247EF8F500DF3AC1 /* myTodo_christmas.png in Resources */,
+				5BE722BF247EDA0A00508FF1 /* MainView.storyboard in Resources */,
 				5B6AA485247C396D002B3227 /* Assets.xcassets in Resources */,
-				5B6AA480247C396C002B3227 /* Main.storyboard in Resources */,
+				5B6AA480247C396C002B3227 /* Master.storyboard in Resources */,
+				5B718CFD247EDC1600DFE7E9 /* Stats.storyboard in Resources */,
+				5BE722BD247ED87100508FF1 /* Settings.storyboard in Resources */,
+				5B021E5E247EF8F500DF3AC1 /* myTodo2.png in Resources */,
+				5B718CFB247EDAE800DFE7E9 /* MoodList.storyboard in Resources */,
+				5B021E5D247EF8F500DF3AC1 /* myTodo1.png in Resources */,
+				5B021E5F247EF8F500DF3AC1 /* myTodo2019dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,20 +441,39 @@
 			files = (
 				5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */,
 				5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */,
+				5B021E3C247EF42700DF3AC1 /* TipJar+Transaction.swift in Sources */,
+				5B021E50247EF4F100DF3AC1 /* BorderedButton.swift in Sources */,
 				5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */,
+				5B021E3B247EF42700DF3AC1 /* TipJarTableViewController.swift in Sources */,
 				5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */,
 				5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */,
+				5B021E2E247EE14200DF3AC1 /* SettingsViewController.swift in Sources */,
+				5B021E32247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift in Sources */,
+				5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */,
+				5B021E36247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift in Sources */,
 				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
+				5B021E46247EF48A00DF3AC1 /* Bundle+Icon.swift in Sources */,
+				5B021E3D247EF42700DF3AC1 /* TipJar+TableView.swift in Sources */,
 				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
+				5BEE0D92247F02AC001C2003 /* AppIcon+TableView.swift in Sources */,
 				5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */,
 				5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */,
+				5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */,
+				5B021E4B247EF48A00DF3AC1 /* UIView+Effects.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
 				5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
+				5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */,
+				5B021E52247EF4F600DF3AC1 /* TopAlignedLabel.swift in Sources */,
+				5B021E61247EF90F00DF3AC1 /* AppIcon.swift in Sources */,
 				5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */,
+				5B021E54247EF5B700DF3AC1 /* TipTableViewCell.swift in Sources */,
+				5B021E34247EED4900DF3AC1 /* SettingsViewController+TableView.swift in Sources */,
 				5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */,
+				5B021E4A247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift in Sources */,
 				5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */,
+				5B021E30247EEA3600DF3AC1 /* Utilities.swift in Sources */,
 				5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,12 +481,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B6AA47E247C396C002B3227 /* Main.storyboard */ = {
+		5B6AA47E247C396C002B3227 /* Master.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5B6AA47F247C396C002B3227 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Master.storyboard;
 			sourceTree = "<group>";
 		};
 		5B6AA486247C396D002B3227 /* LaunchScreen.storyboard */ = {
@@ -444,8 +620,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +631,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,8 +643,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +654,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

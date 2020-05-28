@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8TL-X1-d4S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistiken-->
+        <scene sceneID="7tH-gU-NXf">
+            <objects>
+                <viewController title="Statistiken" id="8TL-X1-d4S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lnn-V9-XUq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistiken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaS-I9-hfN">
+                                <rect key="frame" x="130.5" y="427.5" width="153" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uaS-I9-hfN" firstAttribute="centerY" secondItem="Lnn-V9-XUq" secondAttribute="centerY" id="2L8-M5-6vG"/>
+                            <constraint firstItem="uaS-I9-hfN" firstAttribute="centerX" secondItem="Lnn-V9-XUq" secondAttribute="centerX" id="EWV-aR-tPa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e9H-Jz-AWw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Statistiken" image="chart.pie" catalog="system" id="9td-Uw-yBm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRa-Kf-IP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="498"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

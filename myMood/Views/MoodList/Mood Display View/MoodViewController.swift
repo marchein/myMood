@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MoodViewController: UITableViewController {
     // MARK: - Outlets
@@ -18,6 +19,7 @@ class MoodViewController: UITableViewController {
     // MARK: - Properties
     var mood: Mood?
     var indexPath: IndexPath?
+    var fetchedResultsController: NSFetchedResultsController<Mood>?
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -27,14 +29,19 @@ class MoodViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let indexPath = indexPath {
-            let fetchedResultsController = (UIApplication.shared.delegate as! AppDelegate).fetchedResultsController
-            self.mood = fetchedResultsController.object(at: indexPath)
+        if let indexPath = self.indexPath {
+            if let frc = self.fetchedResultsController {
+                self.mood = frc.object(at: indexPath)
+                self.setupView()
+            }
         } else {
-            self.mood = Model.getLastEntry()
+            if let newMood = Model.getLastEntry() {
+                self.mood = newMood
+                self.setupView()
+            } else {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
         }
-        self.setupView()
-        print("did update")
     }
     
     private func setupView() {        
