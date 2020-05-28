@@ -29,6 +29,11 @@ class StatsViewController: UITableViewController, NSFetchedResultsControllerDele
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Actions
     @IBAction func segmentedControlChanged(_ sender: Any) {
         guard let segmentedControl = sender as? UISegmentedControl else {
@@ -69,11 +74,18 @@ class StatsViewController: UITableViewController, NSFetchedResultsControllerDele
             cell.detailTextLabel?.text = "\(self.StatsContainer.data.count)"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Ältester Eintrag"
-            cell.detailTextLabel?.text = self.StatsContainer.lastDay.isoDate
+            let lastDay = self.StatsContainer.lastDay
+            cell.detailTextLabel?.text = lastDay?.isoDate ?? "Kein Eintrag vorhanden"
         } else if indexPath.row == 2 {
-            let totalWeeks = Calendar.current.dateComponents([.weekOfMonth], from: Date(), to: self.StatsContainer.lastDay.date!).weekOfMonth!
             cell.textLabel?.text = "Einträge pro Woche"
-            cell.detailTextLabel?.text = "\(self.StatsContainer.data.count / -totalWeeks)"
+            if let lastDay = self.StatsContainer.lastDay {
+                cell.textLabel?.text = "Einträge pro Woche"
+                let totalWeeks = Calendar.current.dateComponents([.weekOfMonth], from: Date(), to: lastDay.date!).weekOfMonth!
+                let postsPerWerk = totalWeeks == 0 ? self.StatsContainer.data.count : self.StatsContainer.data.count / -totalWeeks
+                cell.detailTextLabel?.text = "\(postsPerWerk)"
+            } else {
+                cell.detailTextLabel?.text = "0"
+            }
         }
         return cell
     }

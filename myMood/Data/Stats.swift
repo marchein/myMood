@@ -62,9 +62,14 @@ class Stats {
         }
     }
     
-    var lastDay: Mood {
+    var lastDay: Mood? {
         get {
-            return self.data[self.data.count - 1]
+            let count = self.data.count
+            if count == 0 {
+                return nil
+            } else {
+                return self.data[self.data.count - 1]
+            }
         }
     }
     
