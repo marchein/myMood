@@ -19,6 +19,21 @@ struct LocalKeys {
     static let isTester = "isTester"
     // has tipped?
     static let hasTipped = "hasTipped"
+    
+    // notificationsEnabled?
+    static let notificationsEnabled = "notificationsEnabled"
+    
+    static let morningNotificationEnabled = "morningNotificationEnabled"
+    static let morningNotificationHour = "morningNotificationHour"
+    static let morningNotificationMinute = "morningNotificationMinute"
+    
+    static let afternoonNotificationEnabled = "afternoonNotificationEnabled"
+    static let afternoonNotificationHour = "afternoonNotificationHour"
+    static let afternoonNotificationMinute = "afternoonNotificationMinute"
+    
+    static let eveningNotificationEnabled = "eveningNotificationEnabled"
+    static let eveningNotificationHour = "eveningNotificationHour"
+    static let eveningNotificationMinute = "eveningNotificationMinute"
 }
 
 // MARK: - App Data
@@ -45,7 +60,6 @@ struct Model {
     }
     
     static let DEBUG = "MH_DEBUG"
-    
     static let groupIdentifier = "group.de.marc-hein.myMood.Data"
     static let appStoreId = "1515366183"
     static let mailAdress = "dev@marc-hein.de"
@@ -55,7 +69,7 @@ struct Model {
     
     static let askForReviewAt = 5
     
-    static let sharedDefaults: UserDefaults = UserDefaults(suiteName: Model.groupIdentifier)!
+    static let sharedDefaults: UserDefaults = UserDefaults(suiteName: "groupIdentifier")!
     
     static let defaultAppIcon = "default"
     static var appIcons = AppIcons(icons: [
@@ -73,6 +87,7 @@ struct SegueIdentifiers {
     static let ShowMoodIdentifier = "showMoodSegue"
     static let EditMoodIdentifier = "editMoodSegue"
     static let AddMoodIdentifier = "addMoodSegue"
+    static let EditNotificationSegue = "editNotificationSegue"
 }
 
 //MARK:- myMoodIAP

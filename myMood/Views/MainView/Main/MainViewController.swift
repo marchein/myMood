@@ -22,10 +22,12 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
     }
     var moods: [Mood] = []
     static let wantedSections = 3
+    var notificationsAllowed = false
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        (UIApplication.shared.delegate as! AppDelegate).mainVC = self
         self.setupApp()
     }
     
@@ -45,8 +47,28 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
             Model.sharedDefaults.set(isSimulatorOrTestFlight(), forKey: LocalKeys.isTester)
             Model.sharedDefaults.set(Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
             Model.sharedDefaults.set(0, forKey: LocalKeys.moodsAdded)
+            self.setupNotifications()
             Model.sharedDefaults.set(true, forKey: LocalKeys.isSetup)
         }
+        
+    }
+    
+    private func setupNotifications() {
+        let notificationCenter = (UIApplication.shared.delegate as? AppDelegate)?.notificationCenter
+        
+        notificationCenter?.getNotificationSettings(completionHandler: { (settings) in
+            self.notificationsAllowed = settings.authorizationStatus == .authorized
+            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.notificationsEnabled)
+            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.morningNotificationEnabled)
+            Model.sharedDefaults.set(8, forKey: LocalKeys.morningNotificationHour)
+            Model.sharedDefaults.set(0, forKey: LocalKeys.morningNotificationMinute)
+            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.afternoonNotificationEnabled)
+            Model.sharedDefaults.set(13, forKey: LocalKeys.afternoonNotificationHour)
+            Model.sharedDefaults.set(0, forKey: LocalKeys.afternoonNotificationMinute)
+            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.eveningNotificationEnabled)
+            Model.sharedDefaults.set(20, forKey: LocalKeys.eveningNotificationHour)
+            Model.sharedDefaults.set(0, forKey: LocalKeys.eveningNotificationMinute)
+        })
     }
     
     // MARK: - Navigation
@@ -69,7 +91,7 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
     @IBAction func emojiTapped(_ sender: UIButton) {
         performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: sender)
     }
-   
+    
     func loadEmojis(for cell: MoodSelectionTableViewCell) {
         for subview in cell.emojiStackView.arrangedSubviews {
             subview.removeFromSuperview()

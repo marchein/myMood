@@ -12,6 +12,7 @@ import CoreData
 class SettingsViewController: UITableViewController {
     
     // MARK:- Outlets
+    @IBOutlet weak var notificationCell: UITableViewCell!
     @IBOutlet weak var appIconCell: UITableViewCell!
     @IBOutlet weak var appIconIV: UIImageView!
     @IBOutlet weak var appVersionCell: UITableViewCell!
@@ -57,6 +58,10 @@ class SettingsViewController: UITableViewController {
             appIconIV.image = appIcon == Model.defaultAppIcon ? Bundle.main.icon : UIImage(named: appIcon)
             appIconIV.roundCorners(radius: 6)
         }
+        
+        let notificationsEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.notificationsEnabled)
+        self.notificationCell.detailTextLabel?.text = notificationsEnabled ? "Aktiviert" : "Deaktiviert"
+        
         self.tableView.reloadData()
     }
     

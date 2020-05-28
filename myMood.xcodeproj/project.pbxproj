@@ -30,7 +30,10 @@
 		5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */; };
 		5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3E0247C6FD8000F374C /* Mood+Date.swift */; };
 		5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10CFA1247D403C00014B34 /* MoodViewController.swift */; };
+		5B2EEE1E248015230040B9A0 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EEE1D248015230040B9A0 /* StatsViewController.swift */; };
 		5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */; };
+		5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4EA00E247FC3FF00ABA758 /* NotificationViewController.swift */; };
+		5B4EA011247FC6E200ABA758 /* EditNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4EA010247FC6E200ABA758 /* EditNotificationViewController.swift */; };
 		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
 		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
 		5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryViewController.swift */; };
@@ -82,7 +85,10 @@
 		5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		5B04F3E0247C6FD8000F374C /* Mood+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+Date.swift"; sourceTree = "<group>"; };
 		5B10CFA1247D403C00014B34 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		5B2EEE1D248015230040B9A0 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		5B4EA00E247FC3FF00ABA758 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		5B4EA010247FC6E200ABA758 /* EditNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNotificationViewController.swift; sourceTree = "<group>"; };
 		5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DropShadow.swift"; sourceTree = "<group>"; };
 		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
 		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -146,6 +152,7 @@
 		5B021E2B247EE11F00DF3AC1 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5B4EA00D247FC3E600ABA758 /* Notifications */,
 				5B021E2C247EE12D00DF3AC1 /* SettingsMain */,
 				5B021E37247EF42700DF3AC1 /* TipJar */,
 				5BEE0D8E247F02AC001C2003 /* AppIconList */,
@@ -212,6 +219,23 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		5B2EEE1C248015050040B9A0 /* Statistiken */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EEE1D248015230040B9A0 /* StatsViewController.swift */,
+			);
+			path = Statistiken;
+			sourceTree = "<group>";
+		};
+		5B4EA00D247FC3E600ABA758 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5B4EA00E247FC3FF00ABA758 /* NotificationViewController.swift */,
+				5B4EA010247FC6E200ABA758 /* EditNotificationViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		5B4FCBEA247C5DB70031F485 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +266,7 @@
 			children = (
 				5B021E29247EE0FE00DF3AC1 /* MainView */,
 				5B021E2A247EE10D00DF3AC1 /* MoodList */,
+				5B2EEE1C248015050040B9A0 /* Statistiken */,
 				5B021E2B247EE11F00DF3AC1 /* Settings */,
 			);
 			path = Views;
@@ -452,6 +477,7 @@
 				5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */,
 				5B021E36247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift in Sources */,
 				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
+				5B4EA011247FC6E200ABA758 /* EditNotificationViewController.swift in Sources */,
 				5B021E46247EF48A00DF3AC1 /* Bundle+Icon.swift in Sources */,
 				5B021E3D247EF42700DF3AC1 /* TipJar+TableView.swift in Sources */,
 				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
@@ -460,6 +486,7 @@
 				5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */,
 				5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */,
 				5B021E4B247EF48A00DF3AC1 /* UIView+Effects.swift in Sources */,
+				5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
 				5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
@@ -471,6 +498,7 @@
 				5B021E54247EF5B700DF3AC1 /* TipTableViewCell.swift in Sources */,
 				5B021E34247EED4900DF3AC1 /* SettingsViewController+TableView.swift in Sources */,
 				5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */,
+				5B2EEE1E248015230040B9A0 /* StatsViewController.swift in Sources */,
 				5B021E4A247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift in Sources */,
 				5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */,
 				5B021E30247EEA3600DF3AC1 /* Utilities.swift in Sources */,

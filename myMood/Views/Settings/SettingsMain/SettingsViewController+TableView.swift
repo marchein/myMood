@@ -27,12 +27,10 @@ extension SettingsViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        if section == 0 {
-            return "Die Mensaplan Daten stammen vom Studierendenwerk Trier.\nAlle Angaben ohne Gewähr"
-        } else if section == 1 {
+        if section == 1 {
             return "Build Nummer: \(Model.buildNumber) (\(getReleaseTitle()))"
         } else if section == 3 {
-            return "Falls Du deine Datenbank zurücksetzen möchtest, kannst Du dies hier tun"
+            return "Falls Du Deine Datenbank oder die gesamte App zurücksetzen möchtest, kannst Du dies hier tun"
         }
         return nil
     }
