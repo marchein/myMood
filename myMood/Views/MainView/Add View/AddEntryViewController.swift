@@ -180,7 +180,6 @@ class AddEntryViewController: UITableViewController, UITextViewDelegate, ModalDe
     func incrementAddedMoods() {
         let addedMoods = getAddedMoods() + 1
         Model.sharedDefaults.set(addedMoods, forKey: LocalKeys.moodsAdded)
-        print(addedMoods)
         if addedMoods == 10 || addedMoods == 100 || addedMoods == 1000 {
             showRateWindow()
         }

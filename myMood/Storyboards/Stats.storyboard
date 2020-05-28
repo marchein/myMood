@@ -1,39 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8TL-X1-d4S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m1P-j8-Q6S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Statistiken-->
-        <scene sceneID="7tH-gU-NXf">
+        <scene sceneID="EJq-0w-Ce4">
             <objects>
-                <viewController title="Statistiken" id="8TL-X1-d4S" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lnn-V9-XUq">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m1P-j8-Q6S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistiken" image="chart.pie" catalog="system" id="9td-Uw-yBm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vys-QQ-MMf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cJo-Mu-UaF" kind="relationship" relationship="rootViewController" id="6W5-j9-iKH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0J-p6-11H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="497.54464285714283"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="8H5-oR-Gjs">
+            <objects>
+                <tableViewController id="cJo-Mu-UaF" customClass="StatsViewController" customModule="myMood" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nd3-Kw-KC5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistiken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaS-I9-hfN">
-                                <rect key="frame" x="130.5" y="427.5" width="153" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="uaS-I9-hfN" firstAttribute="centerY" secondItem="Lnn-V9-XUq" secondAttribute="centerY" id="2L8-M5-6vG"/>
-                            <constraint firstItem="uaS-I9-hfN" firstAttribute="centerX" secondItem="Lnn-V9-XUq" secondAttribute="centerX" id="EWV-aR-tPa"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="e9H-Jz-AWw"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Statistiken" image="chart.pie" catalog="system" id="9td-Uw-yBm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WRa-Kf-IP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="statsCell" textLabel="2wc-L5-9r6" detailTextLabel="JfM-Bb-HvX" style="IBUITableViewCellStyleValue1" id="h8q-uM-8qP">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h8q-uM-8qP" id="x0W-kh-U7U">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2wc-L5-9r6">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JfM-Bb-HvX">
+                                            <rect key="frame" x="310" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cJo-Mu-UaF" id="SNZ-VF-kQs"/>
+                            <outlet property="delegate" destination="cJo-Mu-UaF" id="gvj-G0-Pua"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="s5L-Bh-quQ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="3" id="7Av-ax-HE2">
+                            <rect key="frame" x="73.5" y="5.5" width="267" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Woche"/>
+                                <segment title="Monat"/>
+                                <segment title="Jahr"/>
+                                <segment title="Gesamt"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedControlChanged:" destination="cJo-Mu-UaF" eventType="valueChanged" id="KSM-36-sSY"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="7Av-ax-HE2" id="LhJ-j7-ago"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdQ-NZ-71K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="498"/>
+            <point key="canvasLocation" x="1049" y="500"/>
         </scene>
     </scenes>
     <resources>

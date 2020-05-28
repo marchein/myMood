@@ -21,6 +21,7 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
         }
     }
     var moods: [Mood] = []
+    var statsContainer = Stats()
     static let wantedSections = 3
     var notificationsAllowed = false
     

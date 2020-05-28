@@ -41,8 +41,10 @@ extension MainViewController {
     }
     
     private func getStatsCell() -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Hier erscheinen demnächst Statistiken"
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "statCell")!
+        self.statsContainer.selectedTime = .allTime
+        cell.textLabel?.text = "Einträge"
+        cell.detailTextLabel?.text = "\(self.statsContainer.data.count)"
         return cell
     }
     
@@ -64,6 +66,9 @@ extension MainViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        if self.tableView.cellForRow(at: indexPath)?.reuseIdentifier == "statCell" {
+            self.tabBarController?.selectedIndex = 2
+        }
     }
     
     private func getLatestEntryCell() -> MoodTableViewCell {

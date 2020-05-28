@@ -31,6 +31,8 @@
 		5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04F3E0247C6FD8000F374C /* Mood+Date.swift */; };
 		5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10CFA1247D403C00014B34 /* MoodViewController.swift */; };
 		5B2EEE1E248015230040B9A0 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EEE1D248015230040B9A0 /* StatsViewController.swift */; };
+		5B2EEE202480291C0040B9A0 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EEE1F2480291C0040B9A0 /* Stats.swift */; };
+		5B2EEE2224802D890040B9A0 /* Date+StartEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EEE2124802D890040B9A0 /* Date+StartEnd.swift */; };
 		5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */; };
 		5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4EA00E247FC3FF00ABA758 /* NotificationViewController.swift */; };
 		5B4EA011247FC6E200ABA758 /* EditNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4EA010247FC6E200ABA758 /* EditNotificationViewController.swift */; };
@@ -86,6 +88,8 @@
 		5B04F3E0247C6FD8000F374C /* Mood+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+Date.swift"; sourceTree = "<group>"; };
 		5B10CFA1247D403C00014B34 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		5B2EEE1D248015230040B9A0 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		5B2EEE1F2480291C0040B9A0 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		5B2EEE2124802D890040B9A0 /* Date+StartEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartEnd.swift"; sourceTree = "<group>"; };
 		5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		5B4EA00E247FC3FF00ABA758 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		5B4EA010247FC6E200ABA758 /* EditNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNotificationViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 			children = (
 				5B021E60247EF90F00DF3AC1 /* AppIcon.swift */,
 				5B6AA493247C5319002B3227 /* Model.swift */,
+				5B2EEE1F2480291C0040B9A0 /* Stats.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */,
 				5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */,
 				5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */,
+				5B2EEE2124802D890040B9A0 /* Date+StartEnd.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */,
 				5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */,
 				5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */,
+				5B2EEE202480291C0040B9A0 /* Stats.swift in Sources */,
 				5B021E4B247EF48A00DF3AC1 /* UIView+Effects.swift in Sources */,
 				5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
@@ -500,6 +507,7 @@
 				5B6AA490247C4649002B3227 /* MainViewController.swift in Sources */,
 				5B2EEE1E248015230040B9A0 /* StatsViewController.swift in Sources */,
 				5B021E4A247EF48A00DF3AC1 /* SKProduct+LocalizedPrice.swift in Sources */,
+				5B2EEE2224802D890040B9A0 /* Date+StartEnd.swift in Sources */,
 				5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */,
 				5B021E30247EEA3600DF3AC1 /* Utilities.swift in Sources */,
 				5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */,
@@ -648,7 +656,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -671,7 +679,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
