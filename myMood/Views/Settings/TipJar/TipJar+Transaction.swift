@@ -69,7 +69,7 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
                 SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 impact.impactOccurred()
-                showMessage(title: "Erfolgreich Mensaplan unterstützt!", message: "Vielen Dank für Deine Unterstützung!", on: self)
+                showMessage(title: "Erfolgreich myMood unterstützt!", message: "Vielen Dank für Deine Unterstützung!", on: self)
             case SKPaymentTransactionState.failed:
                 //self.navigationController?.view.hideToastActivity()
                 SKPaymentQueue.default().finishTransaction(transaction)

@@ -14,22 +14,22 @@ extension SettingsViewController {
     // MARK: - Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
         if isSimulatorOrTestFlight() {
-            return 4
+            return 3
         }
-        return 3
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 3 {
+        if section == 2 {
             return "Vorsicht"
         }
         return nil
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        if section == 1 {
+        if section == 0 {
             return "Build Nummer: \(Model.buildNumber) (\(getReleaseTitle()))"
-        } else if section == 3 {
+        } else if section == 2 {
             return "Falls Du Deine Datenbank oder die gesamte App zurücksetzen möchtest, kannst Du dies hier tun"
         }
         return nil

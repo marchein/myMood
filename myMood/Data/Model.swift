@@ -66,17 +66,12 @@ struct Model {
     static let website = "https://marc-hein.de/"
     static let versionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     static let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-    
-    static let askForReviewAt = 5
-    
+        
     static let sharedDefaults: UserDefaults = UserDefaults(suiteName: "groupIdentifier")!
     
     static let defaultAppIcon = "default"
     static var appIcons = AppIcons(icons: [
-        AppIcon(iconName: nil, iconTitle: "myMood - " + NSLocalizedString("icon_light", comment: "")),
-        AppIcon(iconName: "myTodo2019dark", iconTitle: "myMood - "  + NSLocalizedString("icon_dark", comment: "")),
-        AppIcon(iconName: "myTodo2", iconTitle: "myTodo (2014)"),
-        AppIcon(iconName: "myTodo1", iconTitle: "myTodo (2013)")
+        AppIcon(iconName: nil, iconTitle: "myMood - Hell")
     ])
 }
 

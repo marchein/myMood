@@ -26,7 +26,7 @@ extension TipJarTableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "introCell", for: indexPath)
             cell.textLabel?.text = "Heyho 😌"
-            cell.detailTextLabel?.text = "Falls Dir die Mensaplan App sehr gefällt, kannst Du hier mit einer Spende an den Entwickler die Entwicklung unterstützen.\nSelbst wenn Du das nicht möchtest, dennoch danke. Der Gedanke zählt!"
+            cell.detailTextLabel?.text = "Falls Dir myMood sehr gefällt, kannst Du hier mit einer Spende an den Entwickler die Entwicklung unterstützen.\nSelbst wenn Du das nicht möchtest, dennoch danke. Der Gedanke zählt!"
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as! TipTableViewCell
