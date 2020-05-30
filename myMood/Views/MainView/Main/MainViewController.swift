@@ -54,7 +54,7 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
         
     }
     
-    private func setupNotifications() {
+    func setupNotifications() {
         let notificationCenter = (UIApplication.shared.delegate as? AppDelegate)?.notificationCenter
         
         notificationCenter?.getNotificationSettings(completionHandler: { (settings) in
@@ -136,10 +136,23 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
                 if let moods = self.fetchedResultsController?.fetchedObjects {
                     self.moods = moods
                     self.tableView.reloadData()
+                    self.updateStats()
                 }
             } catch {
                 self.showAlert(alertText: "Fehler", alertMessage: "Es ist ein Fehler bei der iCloud Synchronisation aufgetreten: \(error)", closeButton: "Schließen")
             }
+        }
+    }
+    
+    private func updateStats() {
+        guard let mainVCNavVC = self.parent as? UINavigationController, let tabController = mainVCNavVC.parent as? UITabBarController else {
+            return
+        }
+        for vc in tabController.viewControllers! {
+            guard let navVC = vc as? UINavigationController, let statsVC = navVC.children.first as? StatsViewController else {
+                continue
+            }
+            statsVC.tableView.reloadData()
         }
     }
 }

@@ -21,10 +21,19 @@ class TipJarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SKPaymentQueue.default().add(self)
-
-        setupProducts()
-        requestProductInfo()
+        self.setupProducts()
         //self.navigationController?.view.makeToastActivity(.center)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.resetData()
+        self.requestProductInfo()
+    }
+    
+    private func resetData() {
+        self.productsArray = []
+        self.hasData = false
     }
 
     // MARK:- IAP

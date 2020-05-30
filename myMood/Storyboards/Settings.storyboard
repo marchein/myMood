@@ -57,7 +57,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myTodo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="W0u-5P-wSM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0u-5P-wSM">
                                                     <rect key="frame" x="343" y="6" width="32" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="32" id="33P-OU-cI0"/>
@@ -596,7 +596,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="XTT-Fg-jdP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     <state key="normal" title="tip_price"/>
                                                     <userDefinedRuntimeAttributes>
@@ -701,6 +701,5 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="myTodo2.png" width="1024" height="1024"/>
     </resources>
 </document>

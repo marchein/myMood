@@ -47,6 +47,7 @@
 		5B718CFD247EDC1600DFE7E9 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */; };
 		5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */; };
 		5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B790801247E869E00C30736 /* EntryViewController+TableView.swift */; };
+		5B94728E24810D4600E95B67 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B94728D24810D4600E95B67 /* StoreKit.framework */; };
 		5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */; };
 		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
 		5BE722BD247ED87100508FF1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BC247ED87100508FF1 /* Settings.storyboard */; };
@@ -102,6 +103,7 @@
 		5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 		5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddEntryViewController+TableView.swift"; sourceTree = "<group>"; };
 		5B790801247E869E00C30736 /* EntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B94728D24810D4600E95B67 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
 		5BE722BC247ED87100508FF1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */,
+				5B94728E24810D4600E95B67 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +231,7 @@
 		5B4FCBEA247C5DB70031F485 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B94728D24810D4600E95B67 /* StoreKit.framework */,
 				5B4FCBEB247C5DB70031F485 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -636,7 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -659,7 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

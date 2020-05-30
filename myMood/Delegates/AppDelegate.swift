@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
         UNUserNotificationCenter.current().delegate = self
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
+            if didAllow {
+                DispatchQueue.main.async {
+                    self.mainVC?.setupNotifications()
+                }
+            }
             if !didAllow {
                 print("User has declined notifications")
             }

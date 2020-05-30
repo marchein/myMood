@@ -27,7 +27,13 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
             for product in response.products {
                 productsArray.append(product)
             }
-            productsArray = productsArray.reversed()
+            print(productsArray)
+            productsArray = productsArray.sorted(by: { (one, two) -> Bool in
+                guard let one = one, let two = two else {
+                    return false
+                }
+                return one.price.doubleValue < two.price.doubleValue
+            })
             
             hasData = true
             DispatchQueue.main.async {

@@ -90,6 +90,7 @@ struct myMoodIAP {
     static let smallTip = "de.marc_hein.myMood.tip.sm"
     static let mediumTip = "de.marc_hein.myMood.tip.md"
     static let largeTip = "de.marc_hein.myMood.tip.lg"
+    static let hugeTip = "de.marc_hein.myMood.tip.xl"
     
-    static let allTips = [myMoodIAP.smallTip, myMoodIAP.mediumTip, myMoodIAP.largeTip]
+    static let allTips = [myMoodIAP.smallTip, myMoodIAP.mediumTip, myMoodIAP.largeTip, myMoodIAP.hugeTip]
 }
