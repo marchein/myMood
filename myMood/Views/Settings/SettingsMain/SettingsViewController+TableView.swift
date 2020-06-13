@@ -37,6 +37,7 @@ extension SettingsViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedCell = tableView.cellForRow(at: indexPath) else { return }
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch (selectedCell) {

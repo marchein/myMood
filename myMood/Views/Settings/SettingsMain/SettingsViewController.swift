@@ -62,6 +62,8 @@ class SettingsViewController: UITableViewController {
         let notificationsEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.notificationsEnabled)
         self.notificationCell.detailTextLabel?.text = notificationsEnabled ? "Aktiviert" : "Deaktiviert"
         
+        print("did reconfigure")
+        
         self.tableView.reloadData()
     }
     

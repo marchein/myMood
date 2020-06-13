@@ -55,11 +55,7 @@ class MoodViewController: UITableViewController {
         
         if let desc = mood.desc, desc.count > 0 {
             self.descTextView.text = desc
-            if #available(iOS 13.0, *) {
-                self.descTextView.textColor = UIColor.label
-            } else {
-                self.descTextView.textColor = UIColor.black
-            }
+            self.descTextView.textColor = UIColor.label
         } else {
             self.descTextView.text = "Keine Beschreibung vorhanden"
             self.descTextView.textColor = UIColor.lightGray
