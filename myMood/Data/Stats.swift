@@ -26,7 +26,7 @@ class Stats {
             case .allTime:
                 fallthrough
             default:
-                return -4000
+                return -365*30
             }
         }
     }
