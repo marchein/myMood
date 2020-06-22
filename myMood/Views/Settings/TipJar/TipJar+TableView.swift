@@ -33,7 +33,8 @@ extension TipJarTableViewController {
             if productsArray.count > indexPath.row {
                 if let product = productsArray[indexPath.row] {
                     cell.tipTitle.text = product.localizedTitle
-                    cell.tipDesc.text = product.localizedDescription
+                    //cell.tipDesc.text = product.localizedDescription
+                    cell.tipDesc.text = nil
                     cell.purchaseButton.isHidden = false
                     cell.purchaseButton.setTitle(product.localizedPrice, for: .normal)
                 }
