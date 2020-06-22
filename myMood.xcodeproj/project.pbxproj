@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,8 +47,16 @@
 		5B718CFD247EDC1600DFE7E9 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */; };
 		5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */; };
 		5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B790801247E869E00C30736 /* EntryViewController+TableView.swift */; };
+		5B8C71E62494F72D003A22B3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA493247C5319002B3227 /* Model.swift */; };
+		5B8C71EA2494F7B0003A22B3 /* Model+AppOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C71E92494F7B0003A22B3 /* Model+AppOnly.swift */; };
 		5B94728E24810D4600E95B67 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B94728D24810D4600E95B67 /* StoreKit.framework */; };
 		5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */; };
+		5B9C727B24A097040077ACC6 /* UserDefaults+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */; };
+		5B9C727C24A097460077ACC6 /* UserDefaults+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */; };
+		5BC8D7042494F59E00CC5602 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC8D7032494F59E00CC5602 /* NotificationCenter.framework */; platformFilter = ios; };
+		5BC8D7072494F59E00CC5602 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8D7062494F59E00CC5602 /* TodayViewController.swift */; };
+		5BC8D70A2494F59E00CC5602 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8D7082494F59E00CC5602 /* MainInterface.storyboard */; };
+		5BC8D70E2494F59E00CC5602 /* myMood Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5BC8D7022494F59E00CC5602 /* myMood Widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
 		5BE722BD247ED87100508FF1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BC247ED87100508FF1 /* Settings.storyboard */; };
 		5BE722BF247EDA0A00508FF1 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BE247EDA0A00508FF1 /* MainView.storyboard */; };
@@ -58,6 +66,30 @@
 		5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */; };
 		5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BC8D70C2494F59E00CC5602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B6AA46D247C396C002B3227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC8D7012494F59E00CC5602;
+			remoteInfo = Widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BC8D70F2494F59E00CC5602 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BC8D70E2494F59E00CC5602 /* myMood Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B021E2D247EE14200DF3AC1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +135,16 @@
 		5B718CFC247EDC1600DFE7E9 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 		5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddEntryViewController+TableView.swift"; sourceTree = "<group>"; };
 		5B790801247E869E00C30736 /* EntryViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B8C71E92494F7B0003A22B3 /* Model+AppOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+AppOnly.swift"; sourceTree = "<group>"; };
 		5B94728D24810D4600E95B67 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
+		5B9C727924A093FB0077ACC6 /* myMood Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "myMood Widget.entitlements"; sourceTree = "<group>"; };
+		5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Groups.swift"; sourceTree = "<group>"; };
+		5BC8D7022494F59E00CC5602 /* myMood Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "myMood Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC8D7032494F59E00CC5602 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5BC8D7062494F59E00CC5602 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5BC8D7092494F59E00CC5602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5BC8D70B2494F59E00CC5602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
 		5BE722BC247ED87100508FF1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5BE722BE247EDA0A00508FF1 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
@@ -122,6 +162,14 @@
 			files = (
 				5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */,
 				5B94728E24810D4600E95B67 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC8D6FF2494F59E00CC5602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC8D7042494F59E00CC5602 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +281,7 @@
 			children = (
 				5B94728D24810D4600E95B67 /* StoreKit.framework */,
 				5B4FCBEB247C5DB70031F485 /* CloudKit.framework */,
+				5BC8D7032494F59E00CC5602 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,6 +291,7 @@
 			children = (
 				5B021E60247EF90F00DF3AC1 /* AppIcon.swift */,
 				5B6AA493247C5319002B3227 /* Model.swift */,
+				5B8C71E92494F7B0003A22B3 /* Model+AppOnly.swift */,
 				5B2EEE1F2480291C0040B9A0 /* Stats.swift */,
 			);
 			path = Data;
@@ -278,6 +328,7 @@
 				5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */,
 				5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */,
 				5B2EEE2124802D890040B9A0 /* Date+StartEnd.swift */,
+				5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6AA477247C396C002B3227 /* myMood */,
+				5BC8D7052494F59E00CC5602 /* Widget */,
 				5B6AA476247C396C002B3227 /* Products */,
 				5B4FCBEA247C5DB70031F485 /* Frameworks */,
 			);
@@ -308,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6AA475247C396C002B3227 /* myMood.app */,
+				5BC8D7022494F59E00CC5602 /* myMood Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +400,17 @@
 				5B7907FF247E84CE00C30736 /* AddEntryViewController+TableView.swift */,
 			);
 			path = "Add View";
+			sourceTree = "<group>";
+		};
+		5BC8D7052494F59E00CC5602 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C727924A093FB0077ACC6 /* myMood Widget.entitlements */,
+				5BC8D7062494F59E00CC5602 /* TodayViewController.swift */,
+				5BC8D7082494F59E00CC5602 /* MainInterface.storyboard */,
+				5BC8D70B2494F59E00CC5602 /* Info.plist */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		5BEE0D8E247F02AC001C2003 /* AppIconList */ = {
@@ -389,15 +453,34 @@
 				5B6AA471247C396C002B3227 /* Sources */,
 				5B6AA472247C396C002B3227 /* Frameworks */,
 				5B6AA473247C396C002B3227 /* Resources */,
+				5BC8D70F2494F59E00CC5602 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BC8D70D2494F59E00CC5602 /* PBXTargetDependency */,
 			);
 			name = myMood;
 			productName = myMood;
 			productReference = 5B6AA475247C396C002B3227 /* myMood.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5BC8D7012494F59E00CC5602 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC8D7122494F59E00CC5602 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				5BC8D6FE2494F59E00CC5602 /* Sources */,
+				5BC8D6FF2494F59E00CC5602 /* Frameworks */,
+				5BC8D7002494F59E00CC5602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = 5BC8D7022494F59E00CC5602 /* myMood Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -410,6 +493,9 @@
 				ORGANIZATIONNAME = "Marc Hein";
 				TargetAttributes = {
 					5B6AA474247C396C002B3227 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5BC8D7012494F59E00CC5602 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -428,6 +514,7 @@
 			projectRoot = "";
 			targets = (
 				5B6AA474247C396C002B3227 /* myMood */,
+				5BC8D7012494F59E00CC5602 /* Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -447,6 +534,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BC8D7002494F59E00CC5602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC8D70A2494F59E00CC5602 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -454,6 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9C727B24A097040077ACC6 /* UserDefaults+Groups.swift in Sources */,
 				5B10CFA2247D403C00014B34 /* MoodViewController.swift in Sources */,
 				5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */,
 				5B021E3C247EF42700DF3AC1 /* TipJar+Transaction.swift in Sources */,
@@ -473,6 +569,7 @@
 				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
 				5BEE0D92247F02AC001C2003 /* AppIcon+TableView.swift in Sources */,
 				5B790802247E869E00C30736 /* EntryViewController+TableView.swift in Sources */,
+				5B8C71EA2494F7B0003A22B3 /* Model+AppOnly.swift in Sources */,
 				5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */,
 				5B4079DF247EB6EE00FCC950 /* UIViewController+Alert.swift in Sources */,
 				5B2EEE202480291C0040B9A0 /* Stats.swift in Sources */,
@@ -498,7 +595,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BC8D6FE2494F59E00CC5602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC8D7072494F59E00CC5602 /* TodayViewController.swift in Sources */,
+				5B9C727C24A097460077ACC6 /* UserDefaults+Groups.swift in Sources */,
+				5B8C71E62494F72D003A22B3 /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BC8D70D2494F59E00CC5602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 5BC8D7012494F59E00CC5602 /* Widget */;
+			targetProxy = 5BC8D70C2494F59E00CC5602 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B6AA47E247C396C002B3227 /* Master.storyboard */ = {
@@ -515,6 +631,14 @@
 				5B6AA487247C396D002B3227 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BC8D7082494F59E00CC5602 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BC8D7092494F59E00CC5602 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -637,6 +761,7 @@
 		5B6AA48D247C396D002B3227 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,6 +785,7 @@
 		5B6AA48E247C396D002B3227 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,6 +800,52 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5BC8D7102494F59E00CC5602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJR28ZV94C;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
+				PRODUCT_NAME = "myMood Widget";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BC8D7112494F59E00CC5602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJR28ZV94C;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
+				PRODUCT_NAME = "myMood Widget";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,6 +869,15 @@
 			buildConfigurations = (
 				5B6AA48D247C396D002B3227 /* Debug */,
 				5B6AA48E247C396D002B3227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC8D7122494F59E00CC5602 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC8D7102494F59E00CC5602 /* Debug */,
+				5BC8D7112494F59E00CC5602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -48,10 +48,10 @@ class SettingsViewController: UITableViewController {
     }
     
     fileprivate func reconfigureView() {
-        currentAppIcon = Model.sharedDefaults.string(forKey: LocalKeys.currentAppIcon)
+        currentAppIcon = UserDefaults.data.string(forKey: LocalKeys.currentAppIcon)
         if !Model.appIcons.contains(iconName: currentAppIcon) {
             currentAppIcon = Model.defaultAppIcon
-            Model.sharedDefaults.set(currentAppIcon, forKey: LocalKeys.currentAppIcon)
+            UserDefaults.data.set(currentAppIcon, forKey: LocalKeys.currentAppIcon)
         }
         
         if let appIcon = currentAppIcon {
@@ -59,7 +59,7 @@ class SettingsViewController: UITableViewController {
             appIconIV.roundCorners(radius: 6)
         }
         
-        let notificationsEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.notificationsEnabled)
+        let notificationsEnabled = UserDefaults.data.bool(forKey: LocalKeys.notificationsEnabled)
         self.notificationCell.detailTextLabel?.text = notificationsEnabled ? "Aktiviert" : "Deaktiviert"
         
         print("did reconfigure")
@@ -123,7 +123,7 @@ class SettingsViewController: UITableViewController {
     }
     
     private func resetDefaults() {
-        let defaults = Model.sharedDefaults
+        let defaults = UserDefaults.data
         let dictionary = defaults.dictionaryRepresentation()
         dictionary.keys.forEach { key in
             defaults.removeObject(forKey: key)

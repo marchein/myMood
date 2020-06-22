@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
                 DispatchQueue.main.async {
                     self.mainVC?.setupNotifications()
                 }
-            }
-            if !didAllow {
+            } else {
                 print("User has declined notifications")
             }
         }
@@ -136,7 +135,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let mainVC = self.mainVC {
             mainVC.performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: mainVC)
         }
-        print(self.mainVC)
         print("pressed notification")
         completionHandler()
     }

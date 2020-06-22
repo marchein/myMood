@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 
-
-
 class MainViewController: UITableViewController, ModalDelegate, NSFetchedResultsControllerDelegate {
     
     // MARK: - Properties
@@ -42,14 +40,14 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
     }
     
     fileprivate func setupApp() {
-        let appSetup = Model.sharedDefaults.bool(forKey: LocalKeys.isSetup)
+        let appSetup = UserDefaults.data.bool(forKey: LocalKeys.isSetup)
         
         if !appSetup {
-            Model.sharedDefaults.set(isSimulatorOrTestFlight(), forKey: LocalKeys.isTester)
-            Model.sharedDefaults.set(Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
-            Model.sharedDefaults.set(0, forKey: LocalKeys.moodsAdded)
+            UserDefaults.data.set(isSimulatorOrTestFlight(), forKey: LocalKeys.isTester)
+            UserDefaults.data.set(Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
+            UserDefaults.data.set(0, forKey: LocalKeys.moodsAdded)
             self.setupNotifications()
-            Model.sharedDefaults.set(true, forKey: LocalKeys.isSetup)
+            UserDefaults.data.set(true, forKey: LocalKeys.isSetup)
         }
         
     }
@@ -59,16 +57,16 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
         
         notificationCenter?.getNotificationSettings(completionHandler: { (settings) in
             self.notificationsAllowed = settings.authorizationStatus == .authorized
-            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.notificationsEnabled)
-            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.morningNotificationEnabled)
-            Model.sharedDefaults.set(8, forKey: LocalKeys.morningNotificationHour)
-            Model.sharedDefaults.set(0, forKey: LocalKeys.morningNotificationMinute)
-            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.afternoonNotificationEnabled)
-            Model.sharedDefaults.set(13, forKey: LocalKeys.afternoonNotificationHour)
-            Model.sharedDefaults.set(0, forKey: LocalKeys.afternoonNotificationMinute)
-            Model.sharedDefaults.set(self.notificationsAllowed, forKey: LocalKeys.eveningNotificationEnabled)
-            Model.sharedDefaults.set(20, forKey: LocalKeys.eveningNotificationHour)
-            Model.sharedDefaults.set(0, forKey: LocalKeys.eveningNotificationMinute)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.notificationsEnabled)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.morningNotificationEnabled)
+            UserDefaults.data.set(8, forKey: LocalKeys.morningNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.morningNotificationMinute)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.afternoonNotificationEnabled)
+            UserDefaults.data.set(13, forKey: LocalKeys.afternoonNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.afternoonNotificationMinute)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.eveningNotificationEnabled)
+            UserDefaults.data.set(20, forKey: LocalKeys.eveningNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.eveningNotificationMinute)
         })
     }
     

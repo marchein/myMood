@@ -14,7 +14,7 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
     func sendSupportMail() {
         #if targetEnvironment(macCatalyst)
         let message = "Bei Fragen und Anregungen kannst uns jeder Zeit unter %@ erreichen."
-        showMessage(title: "Support Anfrage", message: String(format: message, MensaplanApp.mailAdress), on: self)
+        showMessage(title: "Support Anfrage", message: String(format: message, Model.mailAdress), on: self)
         #else
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
