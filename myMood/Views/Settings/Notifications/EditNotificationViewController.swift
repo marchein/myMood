@@ -23,7 +23,7 @@ class EditNotificationViewController: UITableViewController {
         super.viewDidLoad()
         
         self.keys = getSetOfKeys(for: self.notificationTime ?? NotificationTime.error)!
-        self.notificationEnabled = Model.sharedDefaults.bool(forKey: self.keys.enabled!)
+        self.notificationEnabled = UserDefaults.data.bool(forKey: self.keys.enabled!)
         self.notificationSwitch.isOn = self.notificationEnabled
         self.notificationTimePicker.addTarget(self, action: #selector(self.timeChanged(_:)), for: .valueChanged)
 
@@ -33,7 +33,7 @@ class EditNotificationViewController: UITableViewController {
     
     @IBAction func notificationSwitchToggled(_ sender: Any) {
         self.notificationEnabled = self.notificationSwitch.isOn
-        Model.sharedDefaults.set(self.notificationSwitch.isOn, forKey: self.keys.enabled!)
+        UserDefaults.data.set(self.notificationSwitch.isOn, forKey: self.keys.enabled!)
         
         self.updateNotification()
         self.tableView.reloadData()
@@ -55,8 +55,8 @@ class EditNotificationViewController: UITableViewController {
         guard let hour = components.hour, let minute = components.minute else {
             fatalError()
         }
-        Model.sharedDefaults.set(hour, forKey: self.keys.hour!)
-        Model.sharedDefaults.set(minute, forKey: self.keys.minute!)
+        UserDefaults.data.set(hour, forKey: self.keys.hour!)
+        UserDefaults.data.set(minute, forKey: self.keys.minute!)
         
         self.updateNotification()
         
@@ -68,8 +68,8 @@ class EditNotificationViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
                 
-        let hour = String(format: "%02d", Model.sharedDefaults.integer(forKey: self.keys.hour!))
-        let minute = String(format: "%02d", Model.sharedDefaults.integer(forKey: self.keys.minute!))
+        let hour = String(format: "%02d", UserDefaults.data.integer(forKey: self.keys.hour!))
+        let minute = String(format: "%02d", UserDefaults.data.integer(forKey: self.keys.minute!))
         
         let time = formatter.date(from: "\(hour):\(minute)")!
         self.notificationTimePicker.date = time
@@ -103,8 +103,8 @@ class EditNotificationViewController: UITableViewController {
             
             var dateComponents = DateComponents()
             dateComponents.timeZone = TimeZone.init(abbreviation: "Europe/Berlin")
-            dateComponents.hour = Model.sharedDefaults.integer(forKey: self.keys.hour!)
-            dateComponents.minute = Model.sharedDefaults.integer(forKey: self.keys.minute!)
+            dateComponents.hour = UserDefaults.data.integer(forKey: self.keys.hour!)
+            dateComponents.minute = UserDefaults.data.integer(forKey: self.keys.minute!)
             dateComponents.second = 0
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)

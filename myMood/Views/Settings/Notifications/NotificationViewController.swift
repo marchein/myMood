@@ -35,20 +35,20 @@ class NotificationViewController: UITableViewController {
     }
     
     func loadNotificationState() {
-        self.notificationsEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.notificationsEnabled)
+        self.notificationsEnabled = UserDefaults.data.bool(forKey: LocalKeys.notificationsEnabled)
         self.notificationSwitch.isOn = self.notificationsEnabled
     }
     
     @IBAction func notificationSwitchToggled(_ sender: Any) {
-        Model.sharedDefaults.set(self.notificationSwitch.isOn, forKey: LocalKeys.notificationsEnabled)
+        UserDefaults.data.set(self.notificationSwitch.isOn, forKey: LocalKeys.notificationsEnabled)
         self.loadNotificationState()
         self.tableView.reloadData()
     }
     
     func getNotificationData() {
-        self.morningNotificationEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.morningNotificationEnabled)
-        self.afternoonNotificationEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.afternoonNotificationEnabled)
-        self.eveningNotificationEnabled = Model.sharedDefaults.bool(forKey: LocalKeys.eveningNotificationEnabled)
+        self.morningNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.morningNotificationEnabled)
+        self.afternoonNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.afternoonNotificationEnabled)
+        self.eveningNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.eveningNotificationEnabled)
         
         self.morningCell.detailTextLabel?.text = self.morningNotificationEnabled ? "Aktiviert" : "Deaktiviert"
         self.afternoonCell.detailTextLabel?.text = self.afternoonNotificationEnabled ? "Aktiviert" : "Deaktiviert"

@@ -22,7 +22,7 @@ extension AppIconTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedIcon = Model.appIcons.getIcon(for: indexPath.row)?.iconName
         DispatchQueue.main.async(execute: { () -> Void in
-            Model.sharedDefaults.set(selectedIcon ?? Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
+            UserDefaults.data.set(selectedIcon ?? Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
             self.setSelectedImage(key: selectedIcon, cell: tableView.cellForRow(at: indexPath))
             self.tableView.reloadData()
         })
