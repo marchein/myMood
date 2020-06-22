@@ -91,12 +91,12 @@ class Stats {
         guard let context = container?.viewContext else {
             return
         }
-        for _ in 0...entrys {
+        for _ in 0..<entrys {
             let newMood = Mood(context: context)
-            
+            let mood = Model.Moods.randomElement()!
             newMood.date = generateRandomDate(daysBack: daysBack)
-            newMood.mood = Model.Moods.randomElement()
-            newMood.desc = "Random data"
+            newMood.mood = mood
+            newMood.desc = descForMood(index: Model.Moods.firstIndex(of: mood) ?? 0)
             
             do {
                 try context.save()
@@ -105,5 +105,17 @@ class Stats {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func descForMood(index: Int) -> String? {
+        let moodDescs: [[String?]] = [
+            [nil, "Hatte einen schlechen Tag", "Heute hätte nicht schlimmer sein können", "Ich bin sehr traurig", nil],
+            [nil, "Heute hätte besser laufen können", "Mir geht es nicht gut", "Hoffentlich wird morgen besser", nil],
+            [nil, "Heute Nacht hab ich nicht gut geschlafen", "Es ging mir zwischendurch schlecht", "Es geht langsam bergauf...", nil],
+            [nil, "Mir gehts gut", "Sehe morgen meine Freunde wieder", "Habe mit meinen Tieren gespielt", "LOL", nil],
+            [nil, "Heute war sehr großartig", "Besser kann der Tag nicht laufen", "Hatte viel Spaß mit meinen Freunden", nil],
+        ];
+        let randomDesc = Int.random(in: 0..<moodDescs[index].count)
+        return moodDescs[index][Int(randomDesc)]
     }
 }
