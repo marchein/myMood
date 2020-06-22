@@ -65,6 +65,8 @@
 		5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */; };
 		5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */; };
 		5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */; };
+		5BFEECF224A0E2A2009C3459 /* myMoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFEECF124A0E2A2009C3459 /* myMoodUITests.swift */; };
+		5BFEECFA24A0E2B5009C3459 /* myMoodSceenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFEECF924A0E2B5009C3459 /* myMoodSceenshots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,10 @@
 		5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDelegate.swift; sourceTree = "<group>"; };
+		5BFEECEF24A0E2A2009C3459 /* myMoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myMoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFEECF124A0E2A2009C3459 /* myMoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myMoodUITests.swift; sourceTree = "<group>"; };
+		5BFEECF324A0E2A2009C3459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFEECF924A0E2B5009C3459 /* myMoodSceenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myMoodSceenshots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +447,16 @@
 				5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5BFEECF024A0E2A2009C3459 /* myMoodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BFEECF124A0E2A2009C3459 /* myMoodUITests.swift */,
+				5BFEECF324A0E2A2009C3459 /* Info.plist */,
+				5BFEECF924A0E2B5009C3459 /* myMoodSceenshots.swift */,
+			);
+			path = myMoodUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
