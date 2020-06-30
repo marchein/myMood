@@ -19,9 +19,19 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setSubject("[myMood] - Version \(Model.versionString) (Build: \(Model.buildNumber) - \(getReleaseTitle()))")
+            mail.setSubject("[myMood] - Supportanfrage")
             mail.setToRecipients([Model.mailAdress])
-            mail.setMessageBody("Warum kontaktierst Du den Support?", isHTML: false)
+            let mailBody = """
+            Version \(Model.versionString)
+            Build: \(Model.buildNumber)
+            App Variante: \(getReleaseTitle())
+            Gerät: \(UIDevice.current.model)
+            System Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)
+            Jailbreak: \(isJailbroken() ? "Ja": "Nein")
+            
+            Warum kontaktierst Du den Support?
+            """
+            mail.setMessageBody(mailBody, isHTML: false)
             present(mail, animated: true)
         } else {
             print("No mail account configured")

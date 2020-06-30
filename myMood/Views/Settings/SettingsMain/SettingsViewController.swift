@@ -20,6 +20,7 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var appStoreCell: UITableViewCell!
     @IBOutlet weak var rateAppCell: UITableViewCell!
     @IBOutlet weak var developerCell: UITableViewCell!
+    @IBOutlet weak var demoDataCell: UITableViewCell!
     @IBOutlet weak var resetCoreDataCell: UITableViewCell!
     @IBOutlet weak var resetAppCell: UITableViewCell!
     
@@ -28,18 +29,12 @@ class SettingsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+
         self.setupView()
     }
     
     func setupView() {
-        self.appVersionCell.detailTextLabel?.text = Model.versionString
+        self.appVersionCell.detailTextLabel?.text = "\(Model.versionString) (\(Model.buildNumber))"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,6 +123,38 @@ class SettingsViewController: UITableViewController {
         dictionary.keys.forEach { key in
             defaults.removeObject(forKey: key)
         }
+    }
+    
+    func addDemoData() {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Demo Daten erzeugen", message: nil, preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.keyboardType = .numberPad
+            textField.placeholder = "Wie viele Einträge?"
+        }
+        
+        alert.addTextField { (textField) in
+            textField.keyboardType = .numberPad
+            textField.placeholder = "Wie lange zurück?"
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            
+            guard let numberEntrysTextField = alert?.textFields![0], let daysBackTextField = alert?.textFields![1],
+                let numberOfEntrysText = numberEntrysTextField.text, let daysBackText = daysBackTextField.text,
+                let numberOfEntrys = Int(numberOfEntrysText), let daysBack = Int(daysBackText) else {
+                return
+            }
+            print(numberOfEntrys)
+            print(daysBack)
+            Model.statsContainer.addDemoData(entrys: numberOfEntrys, daysBack: daysBack, inViewController: self, showSpinner: (self.navigationController?.parent?.view!)!)
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func killApp() {

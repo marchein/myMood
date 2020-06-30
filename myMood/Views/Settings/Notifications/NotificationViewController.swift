@@ -15,16 +15,17 @@ class NotificationViewController: UITableViewController {
     @IBOutlet weak var afternoonCell: UITableViewCell!
     @IBOutlet weak var eveningCell: UITableViewCell!
     
+    var notificationsAllowed = false
     var notificationsEnabled = false
     var morningNotificationEnabled = false
     var afternoonNotificationEnabled = false
     var eveningNotificationEnabled = false
+    let notificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.checkForNotifications()
         self.loadNotificationState()
-        self.getNotificationData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,25 +35,72 @@ class NotificationViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    func checkForNotifications() {
+        print("checkForNotifications")
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
+            if didAllow {
+                DispatchQueue.main.async {
+                    let notificationsInitialized = UserDefaults.data.bool(forKey: LocalKeys.notificationsInitialized)
+                    if !notificationsInitialized {
+                        self.setupNotifications()
+                    }
+                }
+            } else {
+                print("User has declined notifications")
+            }
+        }
+        
+    }
+    
+    func setupNotifications() {
+        print("setupNotifications")
+        notificationCenter.getNotificationSettings(completionHandler: { (settings) in
+            self.notificationsAllowed = settings.authorizationStatus == .authorized
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.notificationsEnabled)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.morningNotificationEnabled)
+            UserDefaults.data.set(8, forKey: LocalKeys.morningNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.morningNotificationMinute)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.afternoonNotificationEnabled)
+            UserDefaults.data.set(13, forKey: LocalKeys.afternoonNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.afternoonNotificationMinute)
+            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.eveningNotificationEnabled)
+            UserDefaults.data.set(20, forKey: LocalKeys.eveningNotificationHour)
+            UserDefaults.data.set(0, forKey: LocalKeys.eveningNotificationMinute)
+            UserDefaults.data.set(true, forKey: LocalKeys.notificationsInitialized)
+            self.loadNotificationState()
+            self.getNotificationData()
+        })
+    }
+    
     func loadNotificationState() {
+        print("loadNotificationState")
+        
         self.notificationsEnabled = UserDefaults.data.bool(forKey: LocalKeys.notificationsEnabled)
-        self.notificationSwitch.isOn = self.notificationsEnabled
+        DispatchQueue.main.async {
+            self.notificationSwitch.isOn = self.notificationsEnabled
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func notificationSwitchToggled(_ sender: Any) {
+        print("notificationSwitchToggled")
+        
         UserDefaults.data.set(self.notificationSwitch.isOn, forKey: LocalKeys.notificationsEnabled)
         self.loadNotificationState()
-        self.tableView.reloadData()
     }
     
     func getNotificationData() {
+        print("getNotificationData")
         self.morningNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.morningNotificationEnabled)
         self.afternoonNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.afternoonNotificationEnabled)
         self.eveningNotificationEnabled = UserDefaults.data.bool(forKey: LocalKeys.eveningNotificationEnabled)
         
-        self.morningCell.detailTextLabel?.text = self.morningNotificationEnabled ? "Aktiviert" : "Deaktiviert"
-        self.afternoonCell.detailTextLabel?.text = self.afternoonNotificationEnabled ? "Aktiviert" : "Deaktiviert"
-        self.eveningCell.detailTextLabel?.text = self.eveningNotificationEnabled ? "Aktiviert" : "Deaktiviert"
+        DispatchQueue.main.async {
+            self.morningCell.detailTextLabel?.text = self.morningNotificationEnabled ? "Aktiviert" : "Deaktiviert"
+            self.afternoonCell.detailTextLabel?.text = self.afternoonNotificationEnabled ? "Aktiviert" : "Deaktiviert"
+            self.eveningCell.detailTextLabel?.text = self.eveningNotificationEnabled ? "Aktiviert" : "Deaktiviert"
+        }
     }
     
     // MARK: - Table view data source
@@ -91,7 +139,7 @@ class NotificationViewController: UITableViewController {
         guard let indexPath = sender as? IndexPath, let editVC = segue.destination as? EditNotificationViewController else {
             fatalError()
         }
-
+        
         editVC.notificationTime = self.getNotificationTimeFor(indexPath)
     }
     

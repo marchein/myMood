@@ -14,7 +14,7 @@ extension SettingsViewController {
     // MARK: - Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
         if isSimulatorOrTestFlight() {
-            return 3
+            return 4
         }
         return 2
     }
@@ -27,9 +27,7 @@ extension SettingsViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        if section == 0 {
-            return "Build Nummer: \(Model.buildNumber) (\(getReleaseTitle()))"
-        } else if section == 2 {
+        if section == 2 {
             return "Falls Du Deine Datenbank oder die gesamte App zurücksetzen möchtest, kannst Du dies hier tun"
         }
         return nil
@@ -53,6 +51,8 @@ extension SettingsViewController {
         case developerCell:
             openSafariViewControllerWith(url: Model.website)
             break
+        case demoDataCell:
+            self.addDemoData()
         case resetCoreDataCell:
             self.resetCoreDataAction()
             break

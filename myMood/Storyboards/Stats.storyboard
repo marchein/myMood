@@ -18,17 +18,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cJo-Mu-UaF" kind="relationship" relationship="rootViewController" id="6W5-j9-iKH"/>
+                        <segue destination="cJo-Mu-UaF" kind="relationship" relationship="rootViewController" id="ICK-LP-weh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0J-p6-11H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205.79710144927537" y="497.54464285714283"/>
         </scene>
-        <!--Stats View Controller-->
+        <!--Statistiken-->
         <scene sceneID="8H5-oR-Gjs">
             <objects>
-                <tableViewController id="cJo-Mu-UaF" customClass="StatsViewController" customModule="myMood" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Statistiken" id="cJo-Mu-UaF" customClass="StatsViewController" customModule="myMood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nd3-Kw-KC5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,8 +65,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="s5L-Bh-quQ">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="3" id="7Av-ax-HE2">
-                            <rect key="frame" x="73.5" y="5.5" width="267" height="33"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="3" id="zIu-2e-CTL">
+                            <rect key="frame" x="73.5" y="6" width="267" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Woche"/>
@@ -75,17 +75,17 @@
                                 <segment title="Gesamt"/>
                             </segments>
                             <connections>
-                                <action selector="segmentedControlChanged:" destination="cJo-Mu-UaF" eventType="valueChanged" id="KSM-36-sSY"/>
+                                <action selector="segmentedControlChanged:" destination="cJo-Mu-UaF" eventType="valueChanged" id="j7p-3y-qut"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="segmentedControl" destination="7Av-ax-HE2" id="LhJ-j7-ago"/>
+                        <outlet property="segmentedControl" destination="zIu-2e-CTL" id="WbO-L3-l75"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdQ-NZ-71K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="500"/>
+            <point key="canvasLocation" x="1032" y="498"/>
         </scene>
     </scenes>
     <resources>

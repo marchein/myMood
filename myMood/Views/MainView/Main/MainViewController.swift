@@ -19,9 +19,7 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
         }
     }
     var moods: [Mood] = []
-    var statsContainer = Stats()
     static let wantedSections = 3
-    var notificationsAllowed = false
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -46,28 +44,9 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
             UserDefaults.data.set(isSimulatorOrTestFlight(), forKey: LocalKeys.isTester)
             UserDefaults.data.set(Model.defaultAppIcon, forKey: LocalKeys.currentAppIcon)
             UserDefaults.data.set(0, forKey: LocalKeys.moodsAdded)
-            self.setupNotifications()
             UserDefaults.data.set(true, forKey: LocalKeys.isSetup)
         }
         
-    }
-    
-    func setupNotifications() {
-        let notificationCenter = (UIApplication.shared.delegate as? AppDelegate)?.notificationCenter
-        
-        notificationCenter?.getNotificationSettings(completionHandler: { (settings) in
-            self.notificationsAllowed = settings.authorizationStatus == .authorized
-            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.notificationsEnabled)
-            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.morningNotificationEnabled)
-            UserDefaults.data.set(8, forKey: LocalKeys.morningNotificationHour)
-            UserDefaults.data.set(0, forKey: LocalKeys.morningNotificationMinute)
-            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.afternoonNotificationEnabled)
-            UserDefaults.data.set(13, forKey: LocalKeys.afternoonNotificationHour)
-            UserDefaults.data.set(0, forKey: LocalKeys.afternoonNotificationMinute)
-            UserDefaults.data.set(self.notificationsAllowed, forKey: LocalKeys.eveningNotificationEnabled)
-            UserDefaults.data.set(20, forKey: LocalKeys.eveningNotificationHour)
-            UserDefaults.data.set(0, forKey: LocalKeys.eveningNotificationMinute)
-        })
     }
     
     // MARK: - Navigation

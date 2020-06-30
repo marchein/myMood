@@ -9,7 +9,17 @@
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
-		<dict/>
+		<dict>
+			<key>myMood_dark</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>myMood_dark</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
@@ -23,7 +33,17 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
-		<dict/>
+		<dict>
+			<key>myMood_dark</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>myMood_dark</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>

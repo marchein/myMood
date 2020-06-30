@@ -42,9 +42,9 @@ extension MainViewController {
     
     private func getStatsCell() -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "statCell")!
-        self.statsContainer.selectedTime = .allTime
+        Model.statsContainer.selectedTime = .allTime
         cell.textLabel?.text = "Einträge"
-        cell.detailTextLabel?.text = "\(self.statsContainer.data.count)"
+        cell.detailTextLabel?.text = "\(Model.statsContainer.data.count)"
         return cell
     }
     

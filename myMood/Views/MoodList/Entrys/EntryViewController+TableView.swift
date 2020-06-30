@@ -53,7 +53,6 @@ extension EntryViewController {
             fatalError("No mood retrieved for indexPath: \(indexPath)")
         }
         cell.mood = mood
-        cell.timeLabel.text = "\(mood.isoTime) Uhr"
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

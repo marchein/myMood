@@ -21,6 +21,7 @@ struct LocalKeys {
     
     // notificationsEnabled?
     static let notificationsEnabled = "notificationsEnabled"
+    static let notificationsInitialized = "notificationsInitialized"
     
     static let morningNotificationEnabled = "morningNotificationEnabled"
     static let morningNotificationHour = "morningNotificationHour"

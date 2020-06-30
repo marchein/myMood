@@ -16,9 +16,11 @@ class MoodTableViewCell: UITableViewCell {
     // MARK: -
     var mood: Mood? {
         didSet {
-            self.moodLabel.text = mood?.mood
+            guard let mood = mood else { return }
+            self.moodLabel.text = mood.mood
+            self.timeLabel.text = "\(mood.isoTime) Uhr"
             
-            guard let description = mood?.desc, description.count > 0 else {
+            guard let description = mood.desc, description.count > 0 else {
                 self.descriptionLabel.isHidden = true
                 return
             }
@@ -27,7 +29,9 @@ class MoodTableViewCell: UITableViewCell {
             self.descriptionLabel.isHidden = false
         }
     }
+
     
+    @IBOutlet weak var view: UIView!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var moodLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -39,7 +43,7 @@ class MoodTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     func toggleDescription() {
         self.descriptionLabel.isHidden = !self.descriptionLabel.isHidden
     }

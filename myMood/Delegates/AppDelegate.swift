@@ -12,22 +12,11 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControllerDelegate {
-    let notificationCenter = UNUserNotificationCenter.current()
     var mainVC: MainViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
-            if didAllow {
-                DispatchQueue.main.async {
-                    self.mainVC?.setupNotifications()
-                }
-            } else {
-                print("User has declined notifications")
-            }
-        }
         return true
     }
     

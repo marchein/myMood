@@ -71,6 +71,7 @@
                                     <outlet property="descriptionLabel" destination="X6c-2U-UjL" id="KQ4-yP-v8v"/>
                                     <outlet property="moodLabel" destination="Ojs-yj-68Z" id="xXq-kD-PfO"/>
                                     <outlet property="timeLabel" destination="bcA-wX-g9G" id="ymk-tm-2I4"/>
+                                    <outlet property="view" destination="Hrm-md-MR4" id="lPu-Kd-b1O"/>
                                     <segue destination="zdW-CF-vPT" kind="show" identifier="showMoodSegue" id="w9d-lX-KZY"/>
                                 </connections>
                             </tableViewCell>
@@ -80,7 +81,7 @@
                             <outlet property="delegate" destination="GYE-XR-9F8" id="nDU-i3-8uC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Einträge" id="8c1-En-nbp">
+                    <navigationItem key="navigationItem" title="Einträge" largeTitleDisplayMode="always" id="8c1-En-nbp">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="eK5-aE-g3R">
                             <connections>
                                 <segue destination="VUf-jU-xbF" kind="show" identifier="addMoodSegue" id="qrK-7h-CzW"/>
@@ -262,8 +263,8 @@
             <objects>
                 <navigationController id="RbN-PE-6yk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Einträge" image="list.bullet" catalog="system" id="JhK-jj-dlq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Skt-Nn-vrV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Skt-Nn-vrV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -276,7 +277,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nR1-Xx-60L"/>
+        <segue reference="qrK-7h-CzW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>

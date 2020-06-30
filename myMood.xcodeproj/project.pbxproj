@@ -60,6 +60,8 @@
 		5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */; };
 		5BE722BD247ED87100508FF1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BC247ED87100508FF1 /* Settings.storyboard */; };
 		5BE722BF247EDA0A00508FF1 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE722BE247EDA0A00508FF1 /* MainView.storyboard */; };
+		5BECDAB524AB917900A35F3B /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECDAB424AB917900A35F3B /* UIViewController+Spinner.swift */; };
+		5BECDAB724AB9F0B00A35F3B /* myMood_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BECDAB624AB9F0B00A35F3B /* myMood_dark.png */; };
 		5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D8F247F02AC001C2003 /* AppIconTableViewController.swift */; };
 		5BEE0D92247F02AC001C2003 /* AppIcon+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D90247F02AC001C2003 /* AppIcon+TableView.swift */; };
 		5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */; };
@@ -148,6 +150,8 @@
 		5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Modal.swift"; sourceTree = "<group>"; };
 		5BE722BC247ED87100508FF1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5BE722BE247EDA0A00508FF1 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		5BECDAB424AB917900A35F3B /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
+		5BECDAB624AB9F0B00A35F3B /* myMood_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myMood_dark.png; sourceTree = "<group>"; };
 		5BEE0D8F247F02AC001C2003 /* AppIconTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewController.swift; sourceTree = "<group>"; };
 		5BEE0D90247F02AC001C2003 /* AppIcon+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppIcon+TableView.swift"; sourceTree = "<group>"; };
 		5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		5B021E55247EF8F500DF3AC1 /* Alternative App Icons */ = {
 			isa = PBXGroup;
 			children = (
+				5BECDAB624AB9F0B00A35F3B /* myMood_dark.png */,
 			);
 			path = "Alternative App Icons";
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				5B021E43247EF48A00DF3AC1 /* UIView+Effects.swift */,
 				5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */,
 				5B04F3E0247C6FD8000F374C /* Mood+Date.swift */,
+				5BECDAB424AB917900A35F3B /* UIViewController+Spinner.swift */,
 				5BDABB71247D6BE800B2F2FF /* UIViewController+Modal.swift */,
 				5B4079DE247EB6EE00FCC950 /* UIViewController+Alert.swift */,
 				5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */,
@@ -405,9 +411,9 @@
 		5BC8D7052494F59E00CC5602 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				5B9C727924A093FB0077ACC6 /* myMood Widget.entitlements */,
 				5BC8D7062494F59E00CC5602 /* TodayViewController.swift */,
 				5BC8D7082494F59E00CC5602 /* MainInterface.storyboard */,
+				5B9C727924A093FB0077ACC6 /* myMood Widget.entitlements */,
 				5BC8D70B2494F59E00CC5602 /* Info.plist */,
 			);
 			path = Widget;
@@ -524,6 +530,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BECDAB724AB9F0B00A35F3B /* myMood_dark.png in Resources */,
 				5B6AA488247C396D002B3227 /* LaunchScreen.storyboard in Resources */,
 				5BE722BF247EDA0A00508FF1 /* MainView.storyboard in Resources */,
 				5B6AA485247C396D002B3227 /* Assets.xcassets in Resources */,
@@ -581,6 +588,7 @@
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
 				5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */,
 				5B021E52247EF4F600DF3AC1 /* TopAlignedLabel.swift in Sources */,
+				5BECDAB524AB917900A35F3B /* UIViewController+Spinner.swift in Sources */,
 				5B021E61247EF90F00DF3AC1 /* AppIcon.swift in Sources */,
 				5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */,
 				5B021E54247EF5B700DF3AC1 /* TipTableViewCell.swift in Sources */,
@@ -764,8 +772,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -773,9 +783,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,8 +800,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = myMood/myMood.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = myMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -797,9 +811,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -812,6 +828,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -819,6 +836,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
 				PRODUCT_NAME = "myMood Widget";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -835,6 +853,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -842,6 +861,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
 				PRODUCT_NAME = "myMood Widget";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -12,7 +12,7 @@ import UIKit
 
 class Stats {
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-
+    
     var selectedTime: Duration = .allTime
     var difference: Int {
         get {
@@ -24,9 +24,7 @@ class Stats {
             case .year:
                 return -365
             case .allTime:
-                fallthrough
-            default:
-                return -365*30
+                return -365*30                
             }
         }
     }
@@ -87,23 +85,49 @@ class Stats {
         return randomDate
     }
     
-    func addDemoData(entrys: Int, daysBack: Int) {
-        guard let context = container?.viewContext else {
-            return
-        }
-        for _ in 0...entrys {
-            let newMood = Mood(context: context)
-            
-            newMood.date = generateRandomDate(daysBack: daysBack)
-            newMood.mood = Model.Moods.randomElement()
-            newMood.desc = "Random data"
-            
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+    func addDemoData(entrys: Int, daysBack: Int, inViewController vc: UIViewController, showSpinner view: UIView) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            DispatchQueue.main.async {
+                vc.showSpinner(onView: view)
+                
+            }
+            guard let context = self.container?.viewContext else {
+                return
+            }
+            print("generating \(entrys) entrys")
+            for i in 0..<entrys {
+                let newMood = Mood(context: context)
+                
+                let mood = Model.Moods.randomElement()!
+                newMood.date = self.generateRandomDate(daysBack: daysBack)
+                newMood.mood = mood
+                newMood.desc = self.descForMood(index: Model.Moods.firstIndex(of: mood) ?? 0)
+                
+                do {
+                    try context.save()
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+                
+                print(i)
+            }
+            DispatchQueue.main.async {
+                print("remove spinner")
+                vc.removeSpinner()
             }
         }
+    }
+    
+    func descForMood(index: Int) -> String? {
+        let moodDescs: [[String?]] = [
+            [nil, "Hatte einen schlechen Tag", "Heute hätte nicht schlimmer sein können", "Ich bin sehr traurig", nil],
+            [nil, "Heute hätte besser laufen können", "Mir geht es nicht gut", "Hoffentlich wird morgen besser", nil],
+            [nil, "Heute Nacht hab ich nicht gut geschlafen", "Es ging mir zwischendurch schlecht", "Es geht langsam bergauf...", nil],
+            [nil, "Mir gehts gut", "Sehe morgen meine Freunde wieder", "Habe mit meinen Tieren gespielt", "LOL", nil],
+            [nil, "Heute war sehr großartig", "Besser kann der Tag nicht laufen", "Hatte viel Spaß mit meinen Freunden", nil],
+        ];
+        let randomDesc = Int.random(in: 0..<moodDescs[index].count)
+        return moodDescs[index][Int(randomDesc)]
     }
 }

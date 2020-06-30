@@ -31,8 +31,11 @@ extension Model {
     
     static let defaultAppIcon = "default"
     static var appIcons = AppIcons(icons: [
-        AppIcon(iconName: nil, iconTitle: "myMood - Hell")
+        AppIcon(iconName: nil, iconTitle: "myMood - Hell"),
+        AppIcon(iconName: "myMood_dark", iconTitle: "myMood - dunkel")
     ])
+    
+    static let statsContainer = Stats()
 }
 
 //MARK:- Segues
