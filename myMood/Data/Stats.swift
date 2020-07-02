@@ -9,11 +9,17 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftUI
+import Combine
 
-class Stats {
+final class Stats: ObservableObject {
+    let didChange = PassthroughSubject<Stats, Never>()
+
+    
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     var selectedTime: Duration = .allTime
+    
     var difference: Int {
         get {
             switch selectedTime {
@@ -28,6 +34,7 @@ class Stats {
             }
         }
     }
+
     var data: [Mood] {
         get {
             guard let context = container?.viewContext else {
@@ -56,6 +63,7 @@ class Stats {
                     fatalError("error: \(error)")
                 }
             }
+            didChange.send(self)
             return data
         }
     }
@@ -69,6 +77,20 @@ class Stats {
                 return self.data[self.data.count - 1]
             }
         }
+    }
+    
+    func getEntrysPerWeek() -> String {
+        if let lastDay = Model.statsContainer.lastDay {
+            let totalWeeks = Calendar.current.dateComponents([.weekOfMonth], from: Date(), to: lastDay.date!).weekOfMonth!
+            let postsPerWerk = totalWeeks == 0 ? Model.statsContainer.data.count : Model.statsContainer.data.count / -totalWeeks
+            return "\(postsPerWerk)"
+        } else {
+            return "0"
+        }
+    }
+    
+    func getNumberOfEntrys() -> String {
+        return "\(self.data.count)"
     }
     
     func generateRandomDate(daysBack: Int)-> Date?{
@@ -130,4 +152,12 @@ class Stats {
         let randomDesc = Int.random(in: 0..<moodDescs[index].count)
         return moodDescs[index][Int(randomDesc)]
     }
+}
+
+
+enum Duration: String, CaseIterable, Hashable {
+    case week = "Woche"
+    case month = "Monat"
+    case year = "Jahr"
+    case allTime = "Gesamt"
 }

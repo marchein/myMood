@@ -65,8 +65,7 @@ class StatsViewController: UITableViewController, NSFetchedResultsControllerDele
             cell.detailTextLabel?.text = "\(Model.statsContainer.data.count)"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Ältester Eintrag"
-            let lastDay = Model.statsContainer.lastDay
-            cell.detailTextLabel?.text = lastDay?.isoDate ?? "Kein Eintrag vorhanden"
+            cell.detailTextLabel?.text = Model.statsContainer.lastDay?.isoDate ?? "Kein Eintrag vorhanden"
         } else if indexPath.row == 2 {
             cell.textLabel?.text = "Einträge pro Woche"
             if let lastDay = Model.statsContainer.lastDay {
@@ -84,11 +83,4 @@ class StatsViewController: UITableViewController, NSFetchedResultsControllerDele
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
-}
-
-enum Duration {
-    case week
-    case month
-    case year
-    case allTime
 }

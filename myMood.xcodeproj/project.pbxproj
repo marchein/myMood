@@ -53,6 +53,8 @@
 		5B953691247E83CB00AFF76B /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */; };
 		5B9C727B24A097040077ACC6 /* UserDefaults+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */; };
 		5B9C727C24A097460077ACC6 /* UserDefaults+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */; };
+		5BC6BDBE24AE31A70021079F /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6BDBD24AE31A70021079F /* Statistics.swift */; };
+		5BC6BDC024AE42620021079F /* Binding+Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6BDBF24AE42620021079F /* Binding+Change.swift */; };
 		5BC8D7042494F59E00CC5602 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC8D7032494F59E00CC5602 /* NotificationCenter.framework */; platformFilter = ios; };
 		5BC8D7072494F59E00CC5602 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8D7062494F59E00CC5602 /* TodayViewController.swift */; };
 		5BC8D70A2494F59E00CC5602 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8D7082494F59E00CC5602 /* MainInterface.storyboard */; };
@@ -142,6 +144,8 @@
 		5B953690247E83CB00AFF76B /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		5B9C727924A093FB0077ACC6 /* myMood Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "myMood Widget.entitlements"; sourceTree = "<group>"; };
 		5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Groups.swift"; sourceTree = "<group>"; };
+		5BC6BDBD24AE31A70021079F /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		5BC6BDBF24AE42620021079F /* Binding+Change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Change.swift"; sourceTree = "<group>"; };
 		5BC8D7022494F59E00CC5602 /* myMood Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "myMood Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8D7032494F59E00CC5602 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		5BC8D7062494F59E00CC5602 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				5B2EEE1D248015230040B9A0 /* StatsViewController.swift */,
+				5BC6BDBD24AE31A70021079F /* Statistics.swift */,
 			);
 			path = Statistiken;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				5B021E35247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift */,
 				5B2EEE2124802D890040B9A0 /* Date+StartEnd.swift */,
 				5B9C727A24A097040077ACC6 /* UserDefaults+Groups.swift */,
+				5BC6BDBF24AE42620021079F /* Binding+Change.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -584,10 +590,12 @@
 				5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
 				5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */,
+				5BC6BDBE24AE31A70021079F /* Statistics.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
 				5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */,
 				5B021E52247EF4F600DF3AC1 /* TopAlignedLabel.swift in Sources */,
+				5BC6BDC024AE42620021079F /* Binding+Change.swift in Sources */,
 				5BECDAB524AB917900A35F3B /* UIViewController+Spinner.swift in Sources */,
 				5B021E61247EF90F00DF3AC1 /* AppIcon.swift in Sources */,
 				5B6AA47B247C396C002B3227 /* SceneDelegate.swift in Sources */,
