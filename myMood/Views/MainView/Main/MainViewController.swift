@@ -33,6 +33,10 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
         self.updateFetchedResultsController()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.setupWidget()
+    }
+    
     func didCloseModal() {
         self.updateFetchedResultsController()
     }
@@ -46,7 +50,6 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
             UserDefaults.data.set(0, forKey: LocalKeys.moodsAdded)
             UserDefaults.data.set(true, forKey: LocalKeys.isSetup)
         }
-        
     }
     
     // MARK: - Navigation
@@ -131,5 +134,38 @@ class MainViewController: UITableViewController, ModalDelegate, NSFetchedResults
             }
             statsVC.tableView.reloadData()
         }
+    }
+    
+    
+    // MARK: - Widget
+    func setupWidget() {
+        UserDefaults.widget.synchronize()
+        
+        let widgetInit = UserDefaults.widget.bool(forKey: LocalKeysWidget.isInit)
+        
+        if !widgetInit {
+            UserDefaults.widget.set(-1, forKey: LocalKeysWidget.widgetMood)
+            UserDefaults.widget.set(true, forKey: LocalKeysWidget.isInit)
+            UserDefaults.widget.synchronize()
+        }
+        
+        let widgetMood = UserDefaults.widget.integer(forKey: LocalKeysWidget.widgetMood)
+        
+        if (0..<Model.Moods.count).contains(widgetMood) {
+            self.handleWidget(index: widgetMood)
+            
+            UserDefaults.widget.set(-1, forKey: LocalKeysWidget.widgetMood)
+            UserDefaults.widget.synchronize()
+        }
+    }
+    
+    func handleWidget(index: Int) {
+        if self.presentedViewController != nil {
+            self.dismiss(animated: false, completion: nil)
+        }
+        
+        let button = UIButton()
+        button.titleLabel?.text = Model.Moods[index]
+        self.performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: button)
     }
 }
