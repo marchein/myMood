@@ -1,9 +1,9 @@
 //
 //  AppIcon+TableView.swift
-//  myTodo
+//  myMood
 //
 //  Created by Marc Hein on 20.11.18.
-//  Copyright © 2018 Marc Hein Webdesign. All rights reserved.
+//  Copyright © 2018 Marc Hein. All rights reserved.
 //
 
 import Foundation
@@ -31,7 +31,7 @@ extension AppIconTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "appIcons", for: indexPath) as! AppIconTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppIconTableViewCell.reuseIdentifier, for: indexPath) as! AppIconTableViewCell
         configureCell(cell: cell, on: indexPath)
         return cell
     }

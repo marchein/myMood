@@ -1,9 +1,9 @@
 //
 //  TipJar+Transaction.swift
-//  myTodo
+//  myMood
 //
 //  Created by Marc Hein on 20.11.18.
-//  Copyright © 2018 Marc Hein Webdesign. All rights reserved.
+//  Copyright © 2018 Marc Hein. All rights reserved.
 //
 
 import Foundation
@@ -18,6 +18,7 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
             productRequest.delegate = self
             productRequest.start()
         } else {
+            // TODO: remove this - implement correct error handling
             print("Cannot perform In App Purchases.")
         }
     }
@@ -27,7 +28,6 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
             for product in response.products {
                 productsArray.append(product)
             }
-            print(productsArray)
             productsArray = productsArray.sorted(by: { (one, two) -> Bool in
                 guard let one = one, let two = two else {
                     return false
@@ -37,16 +37,11 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
             
             hasData = true
             DispatchQueue.main.async {
-                //self.navigationController?.view.hideToastActivity()
                 self.tableView.reloadData()
             }
         } else {
-            print("There are no products.")
-            print(response.invalidProductIdentifiers)
-            DispatchQueue.main.async {
-                //self.navigationController?.view.hideToastActivity()
-            }
             if response.invalidProductIdentifiers.count != 0 {
+                // TODO: remove this - wtf is this even doing?
                 print(response.invalidProductIdentifiers.description)
             }
         }
@@ -82,7 +77,8 @@ extension TipJarTableViewController: SKProductsRequestDelegate, SKPaymentTransac
                 transactionInProgress = false
                 showMessage(title: "Der Kauf konnte nicht abgeschlossen werden", message: "Entweder wurde der Kauf abgebrochen oder es ist ein Fehler aufgetreten. Bitte versuche es nochmals.", on: self)
             default:
-                print(transaction.transactionState.rawValue)
+                SKPaymentQueue.default().finishTransaction(transaction)
+                transactionInProgress = false
             }
         }
     }

@@ -34,6 +34,8 @@
 		5B4FCBE8247C58FB0031F485 /* UILabel+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBE7247C58FB0031F485 /* UILabel+DropShadow.swift */; };
 		5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FCBEB247C5DB70031F485 /* CloudKit.framework */; };
 		5B4FCBF3247C5E850031F485 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FCBF2247C5E850031F485 /* EntryViewController.swift */; };
+		5B5D526F264E78F8009DB815 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5D526E264E78F8009DB815 /* Charts */; };
+		5B5D5271264E796A009DB815 /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5D5270264E796A009DB815 /* PieChartTableViewCell.swift */; };
 		5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA478247C396C002B3227 /* AppDelegate.swift */; };
 		5B6AA480247C396C002B3227 /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AA47E247C396C002B3227 /* Master.storyboard */; };
 		5B6AA483247C396C002B3227 /* myMood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */; };
@@ -66,6 +68,8 @@
 		5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */; };
 		5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */; };
 		5BEE453D247E6A50002BE6E2 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */; };
+		5BF77EC22650605D00442619 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77EC12650605D00442619 /* StatsTableViewCell.swift */; };
+		5BF77EC42650640500442619 /* TipIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77EC32650640500442619 /* TipIntroTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,7 @@
 		5B4FCBE9247C5DB40031F485 /* myMood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMood.entitlements; sourceTree = "<group>"; };
 		5B4FCBEB247C5DB70031F485 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5B4FCBF2247C5E850031F485 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		5B5D5270264E796A009DB815 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
 		5B6AA475247C396C002B3227 /* myMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6AA478247C396C002B3227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6AA47F247C396C002B3227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
@@ -155,6 +160,8 @@
 		5BEE0D93247F034F001C2003 /* AppIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		5BEE453C247E6A50002BE6E2 /* ModalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDelegate.swift; sourceTree = "<group>"; };
+		5BF77EC12650605D00442619 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		5BF77EC32650640500442619 /* TipIntroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipIntroTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4FCBEC247C5DB70031F485 /* CloudKit.framework in Frameworks */,
+				5B5D526F264E78F8009DB815 /* Charts in Frameworks */,
 				5B94728E24810D4600E95B67 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +450,9 @@
 				5B021E53247EF5B700DF3AC1 /* TipTableViewCell.swift */,
 				5B04F3DE247C6299000F374C /* MoodTableViewCell.swift */,
 				5BEE453A247E6367002BE6E2 /* MoodSelectionTableViewCell.swift */,
+				5B5D5270264E796A009DB815 /* PieChartTableViewCell.swift */,
+				5BF77EC12650605D00442619 /* StatsTableViewCell.swift */,
+				5BF77EC32650640500442619 /* TipIntroTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -464,6 +475,9 @@
 				5BC8D70D2494F59E00CC5602 /* PBXTargetDependency */,
 			);
 			name = myMood;
+			packageProductDependencies = (
+				5B5D526E264E78F8009DB815 /* Charts */,
+			);
 			productName = myMood;
 			productReference = 5B6AA475247C396C002B3227 /* myMood.app */;
 			productType = "com.apple.product-type.application";
@@ -492,7 +506,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Marc Hein";
 				TargetAttributes = {
 					5B6AA474247C396C002B3227 = {
@@ -512,6 +526,9 @@
 				Base,
 			);
 			mainGroup = 5B6AA46C247C396C002B3227;
+			packageReferences = (
+				5B5D526D264E78F8009DB815 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 5B6AA476247C396C002B3227 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -562,12 +579,14 @@
 				5B021E3B247EF42700DF3AC1 /* TipJarTableViewController.swift in Sources */,
 				5B6AA479247C396C002B3227 /* AppDelegate.swift in Sources */,
 				5BEE453B247E6367002BE6E2 /* MoodSelectionTableViewCell.swift in Sources */,
+				5B5D5271264E796A009DB815 /* PieChartTableViewCell.swift in Sources */,
 				5B021E2E247EE14200DF3AC1 /* SettingsViewController.swift in Sources */,
 				5B021E32247EECEA00DF3AC1 /* SettingsViewController+SupportMail.swift in Sources */,
 				5BEE0D94247F0350001C2003 /* AppIconTableViewCell.swift in Sources */,
 				5B021E36247EEE3F00DF3AC1 /* UIViewController+SafariActions.swift in Sources */,
 				5B04F3E1247C6FD8000F374C /* Mood+Date.swift in Sources */,
 				5B4EA011247FC6E200ABA758 /* EditNotificationViewController.swift in Sources */,
+				5BF77EC22650605D00442619 /* StatsTableViewCell.swift in Sources */,
 				5B021E46247EF48A00DF3AC1 /* Bundle+Icon.swift in Sources */,
 				5B021E3D247EF42700DF3AC1 /* TipJar+TableView.swift in Sources */,
 				5BDABB72247D6BE800B2F2FF /* UIViewController+Modal.swift in Sources */,
@@ -581,6 +600,7 @@
 				5B4EA00F247FC3FF00ABA758 /* NotificationViewController.swift in Sources */,
 				5B6AA492247C46C3002B3227 /* AddEntryViewController.swift in Sources */,
 				5B790800247E84CE00C30736 /* AddEntryViewController+TableView.swift in Sources */,
+				5BF77EC42650640500442619 /* TipIntroTableViewCell.swift in Sources */,
 				5B04F3DF247C6299000F374C /* MoodTableViewCell.swift in Sources */,
 				5B6AA494247C5319002B3227 /* Model.swift in Sources */,
 				5BEE0D91247F02AC001C2003 /* AppIconTableViewController.swift in Sources */,
@@ -674,6 +694,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -734,6 +755,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -779,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,7 +829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -824,7 +846,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -832,7 +854,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
 				PRODUCT_NAME = "myMood Widget";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -849,7 +871,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Widget/myMood Widget.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = UJR28ZV94C;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -857,7 +879,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.marc-hein.myMood.Widget";
 				PRODUCT_NAME = "myMood Widget";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -899,6 +921,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B5D526D264E78F8009DB815 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B5D526E264E78F8009DB815 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B5D526D264E78F8009DB815 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5B6AA481247C396C002B3227 /* myMood.xcdatamodeld */ = {

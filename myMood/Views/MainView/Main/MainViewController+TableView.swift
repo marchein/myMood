@@ -41,7 +41,7 @@ extension MainViewController {
     }
     
     private func getStatsCell() -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "statCell")!
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: StatsTableViewCell.reuseIdentifier)!
         Model.statsContainer.selectedTime = .allTime
         cell.textLabel?.text = "Einträge"
         cell.detailTextLabel?.text = "\(Model.statsContainer.data.count)"
@@ -66,7 +66,7 @@ extension MainViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        if self.tableView.cellForRow(at: indexPath)?.reuseIdentifier == "statCell" {
+        if self.tableView.cellForRow(at: indexPath)?.reuseIdentifier == StatsTableViewCell.reuseIdentifier {
             self.tabBarController?.selectedIndex = 2
         }
     }
@@ -89,7 +89,6 @@ extension MainViewController {
     }
     
     // MARK:- NSFetchedResultsControllerDelegate
-    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.beginUpdates()
     }

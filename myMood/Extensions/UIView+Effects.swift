@@ -1,9 +1,9 @@
 //
 //  UIView+Effects.swift
-//  myTodo
+//  myMood
 //
 //  Created by Marc Hein on 20.11.18.
-//  Copyright © 2018 Marc Hein Webdesign. All rights reserved.
+//  Copyright © 2018 Marc Hein. All rights reserved.
 //
 
 import Foundation

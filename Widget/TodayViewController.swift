@@ -15,6 +15,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadEmojis()
+        
+        // TODO: remove this
         print(UserDefaults.widget.integer(forKey: LocalKeysWidget.widgetMood))
     }
     

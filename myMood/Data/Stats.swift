@@ -28,6 +28,7 @@ class Stats {
             }
         }
     }
+    
     var data: [Mood] {
         get {
             guard let context = container?.viewContext else {
@@ -94,8 +95,8 @@ class Stats {
             guard let context = self.container?.viewContext else {
                 return
             }
-            print("generating \(entrys) entrys")
-            for i in 0..<entrys {
+
+            for _ in 0..<entrys {
                 let newMood = Mood(context: context)
                 
                 let mood = Model.Moods.randomElement()!
@@ -109,11 +110,9 @@ class Stats {
                     let nserror = error as NSError
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
-                
-                print(i)
             }
+            
             DispatchQueue.main.async {
-                print("remove spinner")
                 vc.removeSpinner()
             }
         }
@@ -129,5 +128,49 @@ class Stats {
         ];
         let randomDesc = Int.random(in: 0..<moodDescs[index].count)
         return moodDescs[index][Int(randomDesc)]
+    }
+    
+    /**
+     Get all available moods with their number of uses for the selected time period.
+     
+     - returns: Array if (string,int) tupels. First Index is the mood as emoji and second is the number of uses of that mood for the selected time period.
+     
+     # Example #
+     ```
+     let statsData = Model.statsContainer.getPieChartData()
+     
+     for statsMood in statsData {
+        let emoji = statsMood.0
+        let numberOfUses = statsMood.1
+     }
+     ```
+     */
+    func getPieChartData() -> [(String, Int)] {
+        // get all moods from Model
+        let options = Model.Moods
+        // create empty tupel array
+        var result: [(mood: String, numberOfItems: Int)] = []
+        
+        // iterate over every mood option in the model
+        for possibleMood in options {
+            // and set the counter for that mood to 0
+            result.append((possibleMood, 0))
+        }
+        
+        // iterate over the current data (automatically selected the correct time period)
+        for moodObj in data {
+            // check if there is a stored mood
+            guard let moodValue = moodObj.mood else {
+                fatalError("No mood stored for object \(moodObj)")
+            }
+            // get mood from current mood object
+            let index = options.firstIndex(of: moodValue) ?? -1
+            // get current count of occurrences of that mood option
+            let tmpCounter = result[index].numberOfItems
+            // increment it
+            result[index] = (moodValue, tmpCounter + 1)
+        }
+        
+        return result
     }
 }

@@ -24,6 +24,7 @@ extension Model {
                 return results[0]
             }
         } catch {
+            // TODO: remove this
             print("error: \(error)")
         }
         return nil

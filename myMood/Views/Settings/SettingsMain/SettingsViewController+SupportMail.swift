@@ -34,7 +34,6 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
             mail.setMessageBody(mailBody, isHTML: false)
             present(mail, animated: true)
         } else {
-            print("No mail account configured")
             let mailErrorMessage = "Es ist kein E-Mail Konto in Apple Mail hinterlegt. Bitte kontaktiere uns unter %@"
             showMessage(title: "Fehler", message: String(format: mailErrorMessage, Model.mailAdress), on: self)
         }

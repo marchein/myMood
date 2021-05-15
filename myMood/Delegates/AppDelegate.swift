@@ -115,11 +115,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // This function will be called right after user tap on the notification
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         // tell the app that we have finished processing the user’s action / response
-        print(response)
         if let mainVC = self.mainVC {
             mainVC.performSegue(withIdentifier: SegueIdentifiers.AddEntryIdentifier, sender: mainVC)
         }
-        print("pressed notification")
         completionHandler()
     }
 }

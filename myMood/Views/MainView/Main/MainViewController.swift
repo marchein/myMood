@@ -12,6 +12,7 @@ import CoreData
 class MainViewController: UITableViewController, ModalDelegate, NSFetchedResultsControllerDelegate {
     
     // MARK: - Properties
+    // reference to persistent container of app
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     var fetchedResultsController: NSFetchedResultsController<Mood>? {
         didSet {

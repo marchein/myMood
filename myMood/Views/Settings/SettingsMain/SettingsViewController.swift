@@ -56,9 +56,7 @@ class SettingsViewController: UITableViewController {
         
         let notificationsEnabled = UserDefaults.data.bool(forKey: LocalKeys.notificationsEnabled)
         self.notificationCell.detailTextLabel?.text = notificationsEnabled ? "Aktiviert" : "Deaktiviert"
-        
-        print("did reconfigure")
-        
+                
         self.tableView.reloadData()
     }
     
@@ -76,9 +74,7 @@ class SettingsViewController: UITableViewController {
             self.resetCoreData()
         }))
         
-        resetAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in
-            print("Handle Cancel Logic here")
-        }))
+        resetAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil))
         
         present(resetAlert, animated: true, completion: nil)
         
@@ -93,9 +89,7 @@ class SettingsViewController: UITableViewController {
             self.killApp()
         }))
         
-        resetAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in
-            print("Handle Cancel Logic here")
-        }))
+        resetAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil))
         
         present(resetAlert, animated: true, completion: nil)
         
@@ -148,8 +142,7 @@ class SettingsViewController: UITableViewController {
                 let numberOfEntrys = Int(numberOfEntrysText), let daysBack = Int(daysBackText) else {
                 return
             }
-            print(numberOfEntrys)
-            print(daysBack)
+            
             Model.statsContainer.addDemoData(entrys: numberOfEntrys, daysBack: daysBack, inViewController: self, showSpinner: (self.navigationController?.parent?.view!)!)
         }))
 

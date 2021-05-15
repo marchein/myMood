@@ -80,6 +80,7 @@ class EditNotificationViewController: UITableViewController {
     func removeNotification(with identifier: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [identifier])
+        //TODO: remove this
         print("removed notifications with identifier: \(identifier)")
     }
     
@@ -112,10 +113,10 @@ class EditNotificationViewController: UITableViewController {
             
             UNUserNotificationCenter.current().add(request) { (error) in
                 if let error = error {
+                    // TODO: remove this
                     print("error in \(identifier) reminder: \(error.localizedDescription)")
                 }
             }
-            print("added notification: \(request.identifier)")
         }
     }
     

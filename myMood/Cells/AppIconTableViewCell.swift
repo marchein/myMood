@@ -1,15 +1,18 @@
 //
 //  AppIconTableViewCell.swift
-//  myTodo
+//  myMood
 //
 //  Created by Marc Hein on 15.11.18.
-//  Copyright © 2018 Marc Hein Webdesign. All rights reserved.
+//  Copyright © 2018 Marc Hein. All rights reserved.
 //
 
 import UIKit
 
 class AppIconTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    static let reuseIdentifier = "AppIconCell"
+    
     @IBOutlet weak var appIcon: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
